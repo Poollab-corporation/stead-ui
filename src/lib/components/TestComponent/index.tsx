@@ -1,3 +1,5 @@
+'use client'
+
 import {container} from "./styles.css.ts";
 
 interface TestComponentProps {
