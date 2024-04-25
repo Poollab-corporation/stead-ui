@@ -16,7 +16,7 @@
   },
   "private": false,
   "license": "MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
@@ -40,7 +40,6 @@
     "add:package": "yarn add ./stead-ui-react-v0.0.1.tgz"
   },
   "dependencies": {
-    "@stead-ui/react": "./stead-ui-react-v0.0.1.tgz",
     "@vanilla-extract/css": "^1.14.2",
     "@vanilla-extract/vite-plugin": "^4.0.7",
     "react": "^18.2.0",
