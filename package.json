@@ -1,9 +1,33 @@
 {
-  "name": "@stead-ui/react",
-  "descriotion": "Stead UI components for React",
+  "name": "@test-poollab123/stead-ui",
+  "description": "Stead UI React Component Library",
+  "keywords": [
+    "stead-ui",
+    "poollab",
+    "stead"
+  ],
+  "author": {
+    "name": "kimseunghun",
+    "email": "rlatmdgns3076@gmail.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Poollab-corporation/stead-ui.git"
+  },
   "private": false,
-  "version": "0.0.0",
+  "license": "MIT",
+  "version": "0.0.1",
   "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "module": "./dist/index.es.js",
+      "import": "./dist/index.es.js",
+      "default": "./dist/index.cjs.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -14,29 +38,6 @@
     "prepare": "rm -rf dist && tsc && vite build",
     "clean:package": "yarn remove react-carousel-image-optimized && yarn cache clean && rm -rf ./react-carousel-image-optimized-v0.0.1.tgz",
     "add:package": "yarn add ./stead-ui-react-v0.0.1.tgz"
-  },
-  "description": "라이브러리 설명",
-  "keywords": [
-    "stead",
-    "stead-ui"
-  ],
-  "author": {
-    "name": "stead"
-  },
-  "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Poollab-corporation/stead-ui.git"
-  },
-  "main": "dist/index.cjs.js",
-  "module": "dist/index.es.js",
-  "types": "dist/index.d.ts",
-  "exports": {
-    ".": {
-      "module": "./dist/index.es.js",
-      "import": "./dist/index.es.js",
-      "default": "./dist/index.cjs.js"
-    }
   },
   "dependencies": {
     "@stead-ui/react": "./stead-ui-react-v0.0.1.tgz",
