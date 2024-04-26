@@ -36,7 +36,6 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "prepare": "rm -rf dist && tsc && vite build",
-    "clean:package": "yarn remove react-carousel-image-optimized && yarn cache clean && rm -rf ./react-carousel-image-optimized-v0.0.1.tgz",
     "add:package": "yarn add ./stead-ui-react-v0.0.1.tgz"
   },
   "dependencies": {
