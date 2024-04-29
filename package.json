@@ -6,15 +6,15 @@
     "steadhr"
   ],
   "author": {
-    "name": "kimseunghun",
-    "email": "rlatmdgns3076@gmail.com"
+    "name": "Poollab Corporation",
+    "email": "contact@poollab.kr"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/Poollab-corporation/stead-ui.git"
   },
   "license": "MIT",
-  "version": "0.0.6",
+  "version": "0.0.0",
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
