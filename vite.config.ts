@@ -8,6 +8,11 @@ import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
 
 export default defineConfig({
   assetsInclude: ['/sb-preview/runtime.js'],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+  },
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/lib/index.ts'),
