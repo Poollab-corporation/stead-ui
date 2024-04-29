@@ -28,5 +28,6 @@ export const Default: Story = {
   args: {
     icon: 'icon/interview-solid',
     size: 16,
+    color: 'black',
   },
 }
