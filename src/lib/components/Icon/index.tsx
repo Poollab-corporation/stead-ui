@@ -2,7 +2,7 @@
 
 import icons from '../../../assets/icons.json'
 import React, { ReactElement } from 'react'
-import { COLORS } from '../../../constants/colors.ts'
+import { COLORS } from '@/constants/colors.ts'
 
 export type IconNames = keyof typeof icons
 export type colorType = keyof typeof COLORS
