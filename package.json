@@ -5,6 +5,7 @@
     "steadhr-ui",
     "steadhr"
   ],
+  "private": false,
   "author": {
     "name": "Poollab Corporation",
     "email": "contact@poollab.kr"
