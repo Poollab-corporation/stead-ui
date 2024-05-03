@@ -1,4 +1,3 @@
-'use client'
 import { badge } from '@/lib/components/Badge/styles.css.ts'
 
 interface BadgeProps {

@@ -1,14 +1,15 @@
-'use client'
 import { FONT_SIZE_OPTIONS, SIZE_OPTIONS } from './Avatar.constants'
 import { AvatarProps } from './Avatar.interface'
 import {
   avatar,
   avatarBackground,
+  avatarBorder,
   avatarFontSize,
+  avatarImage,
+  avatarIsDisabled,
   avatarSize,
-  avatarBorder, avatarImage, avatarIsDisabled,
 } from '@/lib/components/Avatar/styles.css.ts'
-import { assignInlineVars} from '@vanilla-extract/dynamic'
+import { assignInlineVars } from '@vanilla-extract/dynamic'
 
 export const Avatar = ({ size = 'md', alt = 'avatar', src, isBorder, disabled }: AvatarProps) => {
   const isImage = !src?.includes('rgb')
@@ -24,11 +25,11 @@ export const Avatar = ({ size = 'md', alt = 'avatar', src, isBorder, disabled }:
       <div
         className={avatar}
         style={assignInlineVars({
-          [avatarSize] : sizeToUse,
-          [avatarFontSize] : fontSize,
-          [avatarBorder] : border,
-          [avatarBackground] : src,
-          [avatarIsDisabled] : disabledStyle,
+          [avatarSize]: sizeToUse,
+          [avatarFontSize]: fontSize,
+          [avatarBorder]: border,
+          [avatarBackground]: src,
+          [avatarIsDisabled]: disabledStyle,
         })}
       >
         {firstName}
@@ -36,13 +37,14 @@ export const Avatar = ({ size = 'md', alt = 'avatar', src, isBorder, disabled }:
     )
   }
   return (
-    <div className={avatar} style={
-      assignInlineVars({
+    <div
+      className={avatar}
+      style={assignInlineVars({
         [avatarSize]: sizeToUse,
         [avatarBorder]: border,
-        [avatarIsDisabled] : disabledStyle,
-      })
-    }>
+        [avatarIsDisabled]: disabledStyle,
+      })}
+    >
       <img className={avatarImage} src={src} width={sizeToUse} height={sizeToUse} alt={alt} />
     </div>
   )

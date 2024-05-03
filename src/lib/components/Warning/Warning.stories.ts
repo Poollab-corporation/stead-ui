@@ -1,4 +1,4 @@
-import type {Meta, StoryObj} from '@storybook/react'
+import type { StoryObj } from '@storybook/react'
 import { Warning } from '@/lib'
 
 const meta = {
@@ -9,20 +9,17 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
-    title : {
-      type: 'string',
+    title: {
       description: '경고에 대한 제목을 적어주세요.',
     },
-    description : {
-      type : 'string',
-      description : '경고에 대한 설명을 적어주세요.'
+    description: {
+      description: '경고에 대한 설명을 적어주세요.',
     },
-    subDescription : {
-      type : 'string',
-      description : '경고에 대한 부가 설명을 적어주세요.'
+    subDescription: {
+      description: '경고에 대한 부가 설명을 적어주세요.',
     },
   },
-} satisfies Meta<typeof Warning>
+}
 
 export default meta
 type Story = StoryObj<typeof meta>

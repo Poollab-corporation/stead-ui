@@ -1,5 +1,3 @@
-'use client'
-
 import icons from '../../../assets/icons.json'
 import React, { ReactElement } from 'react'
 import { COLORS } from '@/constants/colors.ts'

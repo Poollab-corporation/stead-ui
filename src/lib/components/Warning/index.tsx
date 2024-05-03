@@ -1,7 +1,7 @@
 import { Icon } from '@/lib'
 import { content, contentDescription, contentTitle } from '@/lib/components/Warning/styles.css.ts'
 
-interface WarningProps {
+export interface WarningProps {
   title: string
   description?: string
   subDescription?: string

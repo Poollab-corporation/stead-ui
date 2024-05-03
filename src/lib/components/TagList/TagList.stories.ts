@@ -1,4 +1,4 @@
-import type {Meta, StoryObj} from '@storybook/react'
+import type { Meta, StoryObj } from '@storybook/react'
 import { TagList } from '@/lib'
 
 const meta = {
@@ -9,16 +9,15 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
-    tags : {
-      type: 'string',
+    tags: {
       description: '태그 안에 들어갈 텍스트를 입력 해주세요.',
     },
     isDisabled: {
       type: 'boolean',
     },
-    isInaccessible : {
+    isInaccessible: {
       type: 'boolean',
-    }
+    },
   },
 } satisfies Meta<typeof TagList>
 
@@ -29,6 +28,6 @@ export const Default: Story = {
   args: {
     tags: ['Tag1', 'Tag2', 'Tag3'],
     isDisabled: false,
-    isInaccessible: false
+    isInaccessible: false,
   },
 }

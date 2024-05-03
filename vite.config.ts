@@ -15,7 +15,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: path.resolve(__dirname, 'src/lib/index.tsx'),
+      entry: path.resolve(__dirname, 'src/lib/index.ts'),
       name: 'react-carousel-image-optimized',
       formats: ['es', 'umd', 'cjs'],
       fileName: (format) => `index.${format}.js`,
