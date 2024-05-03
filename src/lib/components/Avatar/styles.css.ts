@@ -5,8 +5,6 @@ export const avatarFontSize = createVar()
 export const avatarBorder = createVar()
 export const avatarBackground = createVar()
 export const avatarIsDisabled = createVar()
-// TODO : disabled 처리 필요
-
 
 export const avatar = style({
   display: 'flex',
@@ -19,6 +17,20 @@ export const avatar = style({
   fontSize : avatarFontSize,
   border: avatarBorder,
   background : avatarBackground,
+  selectors : {
+    '&:after' : {
+      display : avatarIsDisabled,
+      content: '""',
+      position: 'absolute',
+      top: '0',
+      left: '0',
+      width: '100%',
+      height: '100%',
+      backgroundColor: 'white',
+      borderRadius: '50%',
+      opacity: '0.8',
+    }
+  }
 })
 
 export const avatarImage = style({
