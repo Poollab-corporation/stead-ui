@@ -1,5 +1,5 @@
 import { Icon } from '@/lib'
-import { content } from '@/lib/components/Warning/styles.css.ts'
+import { content, contentDescription, contentTitle } from '@/lib/components/Warning/styles.css.ts'
 
 interface WarningProps {
   title: string
@@ -11,8 +11,8 @@ export const Warning = ({ title, description, subDescription }: WarningProps) =>
   return (
     <div className={content}>
       <Icon icon="icon/warning-solid" color="systemOrange500" size={64} />
-      <div className={title}>{title}</div>
-      <div className={description}>
+      <div className={contentTitle}>{title}</div>
+      <div className={contentDescription}>
         {description}
         <br />
         {subDescription}

@@ -1,4 +1,5 @@
 import {style} from '@vanilla-extract/css'
+import { theme } from '@/globalTheme.css.ts'
 
 export const content = style({
   textAlign: 'center',
@@ -6,13 +7,13 @@ export const content = style({
   margin: '0 0 20px 0'
 });
 
-export const title = style({
-  //${(props) => props.theme.fonts[28]};
-  //font-weight: ${(props) => props.theme.fontWeights.semiBold};
+export const contentTitle = style({
+  ...theme.fonts[24],
+  fontWeight: theme.fontWeights.semiBold,
 });
 
-export const description = style({
+export const contentDescription = style({
   margin: '20px 0 0 0',
-  //${(props) => props.theme.fonts[14]};
-  //font-weight: ${(props) => props.theme.fontWeights.medium};
+  ...theme.fonts[14],
+  fontWeight : theme.fontWeights.medium
 });
