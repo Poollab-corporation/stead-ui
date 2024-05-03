@@ -1,4 +1,5 @@
 import { createVar, style } from '@vanilla-extract/css'
+import { theme } from '@/globalTheme.css.ts'
 
 export const avatarSize = createVar()
 export const avatarFontSize = createVar()
@@ -16,7 +17,9 @@ export const avatar = style({
   height : avatarSize,
   fontSize : avatarFontSize,
   border: avatarBorder,
+  color: theme.color.white,
   background : avatarBackground,
+  fontWeight: theme.fontWeights.medium,
   selectors : {
     '&:after' : {
       display : avatarIsDisabled,
@@ -26,7 +29,7 @@ export const avatar = style({
       left: '0',
       width: '100%',
       height: '100%',
-      backgroundColor: 'white',
+      backgroundColor: theme.color.white,
       borderRadius: '50%',
       opacity: '0.8',
     }

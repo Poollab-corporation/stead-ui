@@ -1,4 +1,5 @@
 import { recipe } from '@vanilla-extract/recipes'
+import { theme } from '@/globalTheme.css.ts'
 
 export const tag = recipe({
   base : {
@@ -9,16 +10,16 @@ export const tag = recipe({
   variants : {
     type : {
       standard : {
-        color: 'red'
+        ...theme.types.standard
       },
       primary : {
-        color: 'blue'
+        ...theme.types.primary
       },
       warning : {
-        color: 'yellow'
+        ...theme.types.warning
       },
       gray : {
-        color: 'gray'
+        ...theme.types.gray
       }
     },
     size: {

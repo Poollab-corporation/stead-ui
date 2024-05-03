@@ -2,7 +2,7 @@ import { badge } from '@/lib/components/Badge/styles.css.ts'
 
 interface BadgeProps {
   readonly text: string
-  readonly type?: 'standard' | 'primary' | 'warning' | 'gray' | 'proceeding' | 'success'
+  readonly type?: 'standard' | 'primary' | 'warning' | 'gray' | 'proceeding'
   readonly isDisabled?: boolean
   readonly rounded?: number
 }

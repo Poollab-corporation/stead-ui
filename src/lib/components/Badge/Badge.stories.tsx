@@ -15,7 +15,7 @@ const meta = {
       description: '지원 경로 및 불합격 표기',
     },
     type: {
-      options: ['standard', 'primary', 'warning', 'gray', 'proceeding', 'success'],
+      options: ['standard', 'primary', 'warning', 'gray', 'proceeding'],
       control: { type: 'select' },
       description: '타입 선택',
     },

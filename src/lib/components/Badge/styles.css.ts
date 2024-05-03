@@ -1,4 +1,5 @@
 import { recipe } from '@vanilla-extract/recipes'
+import { theme } from '@/globalTheme.css.ts'
 
 export const badge = recipe({
   base : {
@@ -12,29 +13,25 @@ export const badge = recipe({
   variants: {
     type: {
       standard: {
-        backgroundColor: '#e0e0e0',
-        color: '#333'
+        backgroundColor: theme.color.blue100,
+        color: theme.color.blue500
       },
       primary: {
-        backgroundColor: '#1976d2',
-        color: '#fff'
+        backgroundColor: theme.color.blue500,
+        color: theme.color.white
       },
       warning: {
-        backgroundColor: '#f57c00',
-        color: '#fff'
+        backgroundColor: theme.color.red100,
+        color: theme.color.red500
       },
       gray: {
-        backgroundColor: '#9e9e9e',
-        color: '#fff'
+        backgroundColor: theme.color.neutralGray100,
+        color: theme.color.neutralGray700
       },
       proceeding: {
-        backgroundColor: '#ffeb3b',
-        color: '#333'
+        backgroundColor: theme.color.systemOrange100,
+        color: theme.color.systemOrange500
       },
-      success: {
-        backgroundColor: '#4caf50',
-        color: '#fff'
-      }
     },
     isDisabled: {
       true: {

@@ -1,4 +1,5 @@
 import { style } from '@vanilla-extract/css'
+import { theme } from '@/globalTheme.css.ts'
 
 export const tagList = style({
     display: 'flex',
@@ -11,12 +12,12 @@ export const tagList = style({
     paddingBottom: '8px',
     selectors : {
     '&::-webkit-scrollbar-track' : {
-      // background: ${(props) => props.theme.colors.neutralGray200},
+      background:theme.color.neutralGray200,
       borderRadius: '4px'
     },
     '&::-webkit-scrollbar-thumb' : {
       backgroundClip: 'padding-box',
-      // border: 4px solid ${(props) => props.theme.colors.neutralGray400};
+      border: `4px solid ${theme.color.neutralGray400}`,
       borderRadius: '4px'
     }
   }
