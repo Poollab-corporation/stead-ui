@@ -1,11 +1,11 @@
 import { IconNames } from '../Icon'
 
-export type Size = 'sm' | 'md' | 'lg' | 'xl'
+export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 export type State = 'primary' | 'secondary' | 'danger'
 export type Style = 'fill-strong' | 'fill-weak' | 'line' | 'mono'
 
 export interface ButtonProps {
-  type?: 'button' | 'submit' | 'reset' | undefined
+  type?: 'button' | 'submit' | 'reset'
   size?: Size
   state?: State
   style?: Style

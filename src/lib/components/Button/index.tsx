@@ -79,7 +79,7 @@ export const Button = ({
         style
       })}
       style={{ width : `${width}px` }}
-      type={!href ? type : undefined}
+      type={type}
       disabled={disabled}
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}

@@ -13,6 +13,12 @@ export const wrapper = recipe({
   },
   variants : {
     size : {
+      xs : {
+        height : '32px',
+        padding : '8px',
+        gap : '6px',
+        ...theme.fonts[11]
+      },
       sm : {
         gap : '4px',
         padding : '5px 8px',
