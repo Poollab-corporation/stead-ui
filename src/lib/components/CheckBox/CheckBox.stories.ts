@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Switch } from '@/lib'
+import { CheckBox } from '.'
 
 const meta = {
-  title: 'Component/Switch',
-  component: Switch,
+  title: 'Component/CheckBox',
+  component: CheckBox,
   parameters: {
     layout: 'centered',
     actions: {
@@ -17,25 +17,24 @@ const meta = {
     isChecked: {
       control: { type: 'boolean' },
     },
+    disabled: { type: 'boolean', description: '비활성화 여부 설정' },
+    onChange: { action: 'changed' },
     size: {
-      options: ['xs', 'sm', 'md', 'lg'],
+      options: ['sm', 'md'],
       control: { type: 'radio' },
-    },
-    isDisabled: { type: 'boolean', description: '비활성화 여부 설정' },
-    onChange: {
-      action: 'checked',
+      description: '사이즈',
     },
   },
-} satisfies Meta<typeof Switch>
+} satisfies Meta<typeof CheckBox>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    size: 'md',
     isChecked: true,
-    isDisabled: false,
-    onChange : () => {}
+    disabled: false,
+    onChange : () => {},
+    size: 'md',
   },
 }
