@@ -2394,6 +2394,7 @@ __metadata:
     eslint-plugin-storybook: "npm:^0.8.0"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
+    react-toastify: "npm:^10.0.5"
     storybook: "npm:^8.0.9"
     typescript: "npm:^5.2.2"
     vite: "npm:^5.2.0"
@@ -4741,6 +4742,13 @@ __metadata:
   version: 1.0.4
   resolution: "clone@npm:1.0.4"
   checksum: 10c0/2176952b3649293473999a95d7bebfc9dc96410f6cbd3d2595cf12fd401f63a4bf41a7adbfd3ab2ff09ed60cb9870c58c6acdd18b87767366fabfc163700f13b
+  languageName: node
+  linkType: hard
+
+"clsx@npm:^2.1.0":
+  version: 2.1.1
+  resolution: "clsx@npm:2.1.1"
+  checksum: 10c0/c4c8eb865f8c82baab07e71bfa8897c73454881c4f99d6bc81585aecd7c441746c1399d08363dc096c550cceaf97bd4ce1e8854e1771e9998d9f94c4fe075839
   languageName: node
   linkType: hard
 
@@ -8686,6 +8694,18 @@ __metadata:
   version: 0.14.1
   resolution: "react-refresh@npm:0.14.1"
   checksum: 10c0/2ec3be9be8a66595968bce983dd1a3ac9b31baa61cb693ab0fc6ea1944fda39265cc17da9acc257e3f3aa7e7786a396f1bc5e18a1f8f55edbdc03f12c7e56596
+  languageName: node
+  linkType: hard
+
+"react-toastify@npm:^10.0.5":
+  version: 10.0.5
+  resolution: "react-toastify@npm:10.0.5"
+  dependencies:
+    clsx: "npm:^2.1.0"
+  peerDependencies:
+    react: ">=18"
+    react-dom: ">=18"
+  checksum: 10c0/66c68ec3d6c017d9f32652d73bb925224921c6a80b629b9d481430d5b4fd504abb7a99995a64b9aef0fc31326c74f3cbe088b3287b978dd0c355079c4bbf4158
   languageName: node
   linkType: hard
 

@@ -1,4 +1,4 @@
-import {  createGlobalTheme } from '@vanilla-extract/css'
+import { createGlobalTheme, globalStyle } from '@vanilla-extract/css'
 import { COLORS, FONT_WEIGHTS, FONTS, TITLES } from './constants'
 
 export const theme = createGlobalTheme(':root', {
@@ -33,3 +33,11 @@ export const theme = createGlobalTheme(':root', {
     }
   }
 })
+globalStyle('a', {
+  textDecoration : 'none',
+  color : 'inherit'
+});
+
+globalStyle('button', {
+  border: 'none'
+});
