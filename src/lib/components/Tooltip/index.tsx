@@ -4,7 +4,6 @@ import { createPortal } from 'react-dom'
 import { ReactNode, useRef, useState } from 'react'
 import { getContentSize, getTooltipDirection } from '@/lib/components/Tooltip/Tooltip.function.tsx'
 import { iconStyle, tooltipStyle } from './styles.css.ts'
-import { Toast } from '@/lib/components/Toast'
 
 interface TooltipProps {
   children: ReactNode
