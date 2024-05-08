@@ -14,7 +14,7 @@ export const tooltipStyle = recipe({
     padding: '10px 12px',
     borderRadius: '6px',
     background: '#373d3f',
-    color: theme.color.white,
+    color: theme.colors.white,
     ...theme.fonts[12],
     selectors : {
       [`${parent} &:after`] : {

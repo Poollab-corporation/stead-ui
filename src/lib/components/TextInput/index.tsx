@@ -31,7 +31,7 @@ export const TextInput = ({
 }: TextInputProps) => {
   const iconColor = state === 'error' ? 'red500' : 'neutralGray300'
   const getErrorBoxShadow = state === 'error' ? '0 2px 10px 0 rgba(255, 91, 70, 0.20)' : '0 2px 10px 0 rgba(70, 142, 255, 0.2)'
-  const getErrorBorderColor = state === 'error' ? theme.color.red500 : theme.color.blue500
+  const getErrorBorderColor = state === 'error' ? theme.colors.red500 : theme.colors.blue500
 
   return (
     <div

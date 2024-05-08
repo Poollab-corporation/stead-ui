@@ -17,6 +17,8 @@ interface TooltipProps {
 
 /**
  * 툴팁 컴포넌트
+ * React Portal : HTML id 가 tooltip인 요소가 있어야 정상 동작합니다.
+ * 
  * isOverflow : isOverflow : true일 경우, TooltipWrapper가 display:flex, width:95%로 설정됩니다. 이 때 tooltip이 정상적으로 동작하지 않을 경우, Tooltip의 부모 요소가 overflow:hidden이 있어야 합니다.
  */
 export const Tooltip = ({

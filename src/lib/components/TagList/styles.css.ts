@@ -12,12 +12,12 @@ export const tagList = style({
     paddingBottom: '8px',
     selectors : {
     '&::-webkit-scrollbar-track' : {
-      background:theme.color.neutralGray200,
+      background:theme.colors.neutralGray200,
       borderRadius: '4px'
     },
     '&::-webkit-scrollbar-thumb' : {
       backgroundClip: 'padding-box',
-      border: `4px solid ${theme.color.neutralGray400}`,
+      border: `4px solid ${theme.colors.neutralGray400}`,
       borderRadius: '4px'
     }
   }

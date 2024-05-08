@@ -17,7 +17,7 @@ export const avatar = style({
   height : avatarSize,
   fontSize : avatarFontSize,
   border: avatarBorder,
-  color: theme.color.white,
+  color: theme.colors.white,
   background : avatarBackground,
   fontWeight: theme.fontWeights.medium,
   selectors : {
@@ -29,7 +29,7 @@ export const avatar = style({
       left: '0',
       width: '100%',
       height: '100%',
-      backgroundColor: theme.color.white,
+      backgroundColor: theme.colors.white,
       borderRadius: '50%',
       opacity: '0.8',
     }

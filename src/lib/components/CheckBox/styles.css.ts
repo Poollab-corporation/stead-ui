@@ -98,12 +98,12 @@ export const inner = recipe({
     },
     isChecked: {
       true: {
-        background : theme.color.blue500,
-        border : `1px solid ${theme.color.blue500}`
+        background : theme.colors.blue500,
+        border : `1px solid ${theme.colors.blue500}`
       },
       false: {
         background: 'none',
-        border : `1px solid ${theme.color.blue500}`
+        border : `1px solid ${theme.colors.blue500}`
       }
     }
   },
@@ -120,6 +120,6 @@ export const input = style({
 export const textWrapper = style({
   marginLeft : '4px',
   fontWeight : theme.fontWeights.medium,
-  color : theme.color.neutralGray800,
+  color : theme.colors.neutralGray800,
   ...theme.fonts['14']
 })

@@ -11,7 +11,7 @@ export const theme = createGlobalTheme(':root', {
   titles: {
     ...TITLES
   },
-  color: {
+  colors: {
     ...COLORS,
   },
   types : {
@@ -33,11 +33,36 @@ export const theme = createGlobalTheme(':root', {
     }
   }
 })
+
+
+globalStyle(':root', {
+  colorScheme: 'light only'
+});
+
+globalStyle('html, body', {
+  overflow: 'hidden'
+})
+
+globalStyle('h1, h2, h3, h4, ul, li, p, button',  {
+  margin: 0,
+  padding: 0
+})
+
+globalStyle('*', {
+  boxSizing: 'border-box'
+})
+
 globalStyle('a', {
   textDecoration : 'none',
   color : 'inherit'
 });
 
 globalStyle('button', {
-  border: 'none'
+  border: 'none',
+  background: 'none',
+  cursor: 'pointer',
+});
+
+globalStyle('li', {
+  listStyleType: 'none'
 });

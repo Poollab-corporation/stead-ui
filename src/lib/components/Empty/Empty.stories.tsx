@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import icons from '../../../assets/icons.json'
-import { Empty } from './index'
+import { Empty } from '@/lib'
 
 const meta = {
   title: 'Component/Empty',

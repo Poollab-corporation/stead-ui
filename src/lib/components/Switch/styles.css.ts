@@ -38,10 +38,10 @@ export const switchLabel = recipe({
     },
     isChecked : {
       true : {
-        background: theme.color.blue500
+        background: theme.colors.blue500
       },
       false : {
-        background: theme.color.neutralGray200
+        background: theme.colors.neutralGray200
       }
     },
     isDisabled : {
@@ -61,7 +61,7 @@ export const switchToggle = recipe({
   base : {
     position: 'absolute',
     top: '50%',
-    background: theme.color.white,
+    background: theme.colors.white,
     transform: 'translate(0, -50%)',
     borderRadius: '50%',
     transition: 'left 400ms ease-in-out',
