@@ -1,5 +1,4 @@
 import React from 'react'
-import { UseFormRegisterReturn } from 'react-hook-form'
 
 export interface TextareaProps {
   value?: string
@@ -9,7 +8,7 @@ export interface TextareaProps {
   rows?: number
   placeholder?: string
   disabled?: boolean
-  register?: UseFormRegisterReturn
+  register?: unknown
   state?: 'success' | 'error'
 }
 

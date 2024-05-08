@@ -1,6 +1,7 @@
 import { style } from '@vanilla-extract/css'
 import { theme } from '@/globalTheme.css.ts'
 
+export const parent = style({})
 export const wrapper = style({
   width: '100%',
   height: '40px',
@@ -21,11 +22,6 @@ export const fileName = style({
     whiteSpace: 'nowrap',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
-    ...theme.fonts[14],
-    selectors :{
-      '& + button' : {
-        flex: '0 0 32px'
-      }
-    }
+    ...theme.fonts[14]
   },
 )
