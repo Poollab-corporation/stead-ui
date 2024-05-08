@@ -13,24 +13,24 @@ export const badge = recipe({
   variants: {
     type: {
       standard: {
-        backgroundColor: theme.color.blue100,
-        color: theme.color.blue500
+        backgroundColor: theme.colors.blue100,
+        color: theme.colors.blue500
       },
       primary: {
-        backgroundColor: theme.color.blue500,
-        color: theme.color.white
+        backgroundColor: theme.colors.blue500,
+        color: theme.colors.white
       },
       warning: {
-        backgroundColor: theme.color.red100,
-        color: theme.color.red500
+        backgroundColor: theme.colors.red100,
+        color: theme.colors.red500
       },
       gray: {
-        backgroundColor: theme.color.neutralGray100,
-        color: theme.color.neutralGray700
+        backgroundColor: theme.colors.neutralGray100,
+        color: theme.colors.neutralGray700
       },
       proceeding: {
-        backgroundColor: theme.color.systemOrange100,
-        color: theme.color.systemOrange500
+        backgroundColor: theme.colors.systemOrange100,
+        color: theme.colors.systemOrange500
       },
     },
     isDisabled: {

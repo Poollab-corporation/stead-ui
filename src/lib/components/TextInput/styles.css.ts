@@ -16,15 +16,15 @@ export const input = style({
   width : inputWidth,
   ...theme.fonts[14],
   fontWeight: theme.fontWeights.medium,
-  color: theme.color.neutralGray800,
-  backgroundColor: theme.color.white,
-  border: `1px solid ${theme.color.neutralGray200}`,
+  color: theme.colors.neutralGray800,
+  backgroundColor: theme.colors.white,
+  border: `1px solid ${theme.colors.neutralGray200}`,
   borderRadius: '6px',
   selectors  :{
     '&::placeholder' : {
       ...theme.fonts[14],
       fontWeight: theme.fontWeights.medium,
-      color: theme.color.neutralGray400
+      color: theme.colors.neutralGray400
     },
     '&:focus' : {
       border: `1px solid ${errorBorderColor}`,
@@ -32,14 +32,14 @@ export const input = style({
       outline: 'none'
     },
     '&:hover:not(:focus, &:disabled)' : {
-      borderColor: theme.color.neutralGray400
+      borderColor: theme.colors.neutralGray400
     },
     '&:disabled' : {
-      backgroundColor: theme.color.neutralGray100,
+      backgroundColor: theme.colors.neutralGray100,
       cursor: 'not-allowed',
     },
     '&:disabled::placeholder' : {
-      color: theme.color.neutralGray400
+      color: theme.colors.neutralGray400
     }
   }
 })

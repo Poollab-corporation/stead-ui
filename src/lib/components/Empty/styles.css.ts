@@ -12,14 +12,14 @@ export const wrapper = style({
 })
 
 export const titleStyle = style({
-  color : theme.color.neutralGray800,
+  color : theme.colors.neutralGray800,
   fontWeight : theme.fontWeights.bold,
   ...theme.fonts[18]
 })
 
 export const descriptionStyle = style({
   margin : '8px 0 16px',
-  color : theme.color.neutralGray400,
+  color : theme.colors.neutralGray400,
   fontWeight : theme.fontWeights.medium,
   ...theme.fonts[16]
 })

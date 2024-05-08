@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Button } from '@/lib/components/Button/index.tsx'
 import icons from '../../../assets/icons.json'
+import { Button } from '@/lib'
 
 const meta = {
   title: 'Component/Button/Default',
@@ -11,7 +11,7 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     size: {
-      options: ['sm', 'md', 'lg', 'xl'],
+      options: ['xs', 'sm', 'md', 'lg', 'xl'],
       description: '사이즈',
     },
     state: {
