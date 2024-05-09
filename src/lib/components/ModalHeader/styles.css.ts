@@ -14,6 +14,9 @@ export const wrapper = style({
 
 export const contents = style({
   margin: 0,
+  maxWidth: 'calc(100% - 32px)',
+  overflow: 'hidden',
+  whiteSpace: 'nowrap',
 })
 
 export const contentsTop = style({
@@ -26,6 +29,8 @@ export const titleStyle = style({
   fontWeight: theme.fontWeights.semiBold,
   ...theme.fonts[16],
   color: theme.colors.neutralGray800,
+  overflow: 'hidden',
+  whiteSpace: 'nowrap',
 })
 
 export const subtitleStyle = style({
