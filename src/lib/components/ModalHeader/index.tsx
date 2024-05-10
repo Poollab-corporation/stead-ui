@@ -13,7 +13,7 @@ interface ModalHeaderProps {
 export const ModalHeader = ({
   title,
   subtitle,
-  width = '480px',
+  width = '100%',
   hasInfo = true,
   hasCloseButton = true,
 }: ModalHeaderProps) => {

@@ -7,7 +7,7 @@ interface ModalFooterProps {
   width?: string
 }
 
-export const ModalFooter = ({ children, hasSelect = false, width = '480px' }: ModalFooterProps) => {
+export const ModalFooter = ({ children, hasSelect = false, width = '100%' }: ModalFooterProps) => {
   const components = React.Children.toArray(children)
   const leftButton = components[0]
   const rightButton = components[components.length - 1]
