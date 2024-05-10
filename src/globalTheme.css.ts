@@ -34,14 +34,9 @@ export const theme = createGlobalTheme(':root', {
   }
 })
 
-
 globalStyle(':root', {
   colorScheme: 'light only'
 });
-
-globalStyle('html, body', {
-  overflow: 'hidden'
-})
 
 globalStyle('h1, h2, h3, h4, ul, li, p, button',  {
   margin: 0,

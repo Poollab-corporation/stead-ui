@@ -1,4 +1,4 @@
-import { IconNames } from '../Icon'
+import { colorType, IconNames } from '../Icon'
 
 export type Size = 'xs' | 'sm' | 'md' | 'lg' | 'xl'
 export type State = 'primary' | 'secondary' | 'danger'
@@ -13,6 +13,8 @@ export interface ButtonProps {
   text?: string
   leadingIcon?: IconNames
   trailingIcon?: IconNames
+  leadingIconColor?: colorType
+  trailingIconColor?: colorType
   href?: string
   isNewTab?: boolean
   isLoading?: boolean

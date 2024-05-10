@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import icons from '../../../assets/icons.json'
 import { Button } from '@/lib'
+import { COLORS } from '@/constants'
 
 const meta = {
   title: 'Component/Button/Default',
@@ -15,7 +16,7 @@ const meta = {
       description: '사이즈',
     },
     state: {
-      name: 'type',
+      name: 'state',
       description: '타입',
       defaultValue: 'primary',
     },
@@ -45,6 +46,16 @@ const meta = {
       options: [undefined, ...Object.keys(icons)],
       description: '텍스트 기준 우측 아이콘',
     },
+    leadingIconColor: {
+      control: 'select',
+      options: [undefined, ...Object.keys(COLORS)],
+      description: '텍스트 기준 좌측 아이콘 색상',
+    },
+    trailingIconColor: {
+      control: 'select',
+      options: [undefined, ...Object.keys(COLORS)],
+      description: '텍스트 기준 우측 아이콘 색상',
+    },
     width: {
       type: 'string',
       description: '버튼 가로사이즈 ex) 120px',
@@ -71,6 +82,8 @@ export const Default: Story = {
     text: '버튼',
     leadingIcon: undefined,
     trailingIcon: undefined,
+    leadingIconColor: undefined,
+    trailingIconColor: undefined,
     disabled: false,
     isLoading: false,
     isNewTab: true,
