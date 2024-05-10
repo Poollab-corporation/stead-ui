@@ -18,4 +18,5 @@ export interface TextInputProps {
   autoFocus?: boolean
   onKeyDown?: (event: React.KeyboardEvent<any>) => void
   step?: string
+  register?: any
 }

@@ -14,6 +14,8 @@ export const Button = ({
   text,
   leadingIcon,
   trailingIcon,
+  leadingIconColor,
+  trailingIconColor,
   href,
   isNewTab = true,
   isLoading = false,
@@ -23,6 +25,16 @@ export const Button = ({
   onMouseLeave,
 }: ButtonProps) => {
   const iconColor = getIconColor(state, style, disabled) as colorType
+  const getLeadingIconColor = () => {
+    if(!leadingIconColor) return iconColor
+    return leadingIconColor as colorType
+  }
+
+  const getTrailingIconColor = () => {
+    if(!trailingIconColor) return iconColor
+    return trailingIconColor as colorType
+  }
+
   const handleClick = () => {
     if (!onClick) return
     onClick()
@@ -65,9 +77,9 @@ export const Button = ({
         href={href}
         target={isNewTab ? '_blank' : '_self'}
       >
-        {leadingIcon && <Icon icon={leadingIcon} color={iconColor} />}
+        {leadingIcon && <Icon icon={leadingIcon} color={getLeadingIconColor()} />}
         {text && <span>{text}</span>}
-        {trailingIcon && <Icon icon={trailingIcon} color={iconColor} />}
+        {trailingIcon && <Icon icon={trailingIcon} color={getTrailingIconColor()} />}
       </a>
     )
   }
@@ -85,9 +97,9 @@ export const Button = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      {leadingIcon && <Icon icon={leadingIcon} color={iconColor} />}
+      {leadingIcon && <Icon icon={leadingIcon} color={getLeadingIconColor()} />}
       {text && <span>{text}</span>}
-      {trailingIcon && <Icon icon={trailingIcon} color={iconColor} />}
+      {trailingIcon && <Icon icon={trailingIcon} color={getTrailingIconColor()} />}
     </button>
   )
 }

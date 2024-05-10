@@ -28,6 +28,7 @@ export const TextInput = ({
   maxLength,
   autoFocus = false,
   step,
+  register,
 }: TextInputProps) => {
   const iconColor = state === 'error' ? 'red500' : 'neutralGray300'
   const getErrorBoxShadow = state === 'error' ? '0 2px 10px 0 rgba(255, 91, 70, 0.20)' : '0 2px 10px 0 rgba(70, 142, 255, 0.2)'
@@ -53,6 +54,7 @@ export const TextInput = ({
         maxLength={maxLength}
         autoFocus={autoFocus}
         step={step}
+        {...register}
         style={assignInlineVars({
           [inputWidth] : width,
           [errorBorderColor] : getErrorBorderColor,
