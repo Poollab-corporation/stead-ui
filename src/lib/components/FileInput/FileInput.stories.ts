@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { FileInput } from '@/lib'
 
 const meta = {
-  title: 'Component/FileInput',
+  title: 'Component/Form/FileInput',
   component: FileInput,
   parameters: {
     layout: 'centered',

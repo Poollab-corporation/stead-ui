@@ -3,7 +3,7 @@ import FloatingInput from '@/lib/components/FloatingInput/index.tsx'
 import icons from '@/assets/icons.json'
 
 const meta = {
-  title: 'Component/Input/FloatingInput',
+  title: 'Component/Form/Input/FloatingInput',
   component: FloatingInput,
   parameters: {
     layout: 'centered',

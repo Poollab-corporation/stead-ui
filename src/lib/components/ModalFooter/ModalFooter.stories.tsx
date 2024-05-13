@@ -4,7 +4,7 @@ import { ModalFooter } from '.'
 import { Button } from '../Button'
 
 const meta = {
-  title: 'Component/ModalFooter',
+  title: 'Component/Modal/ModalFooter',
   component: ModalFooter,
   parameters: {
     layout: 'centered',

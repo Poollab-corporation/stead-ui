@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { TextInput } from '@/lib'
 
 const meta = {
-  title: 'Component/Input/TextInput',
+  title: 'Component/Form/Input/TextInput',
   component: TextInput,
   parameters: {
     layout: 'centered',
