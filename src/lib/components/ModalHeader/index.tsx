@@ -7,8 +7,7 @@ interface ModalHeaderProps {
   title: string
   subtitle?: string
   width?: string
-  hasInfo?: boolean
-  information : string
+  information ?: string
   onClick ?: () => void
 }
 
