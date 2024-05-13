@@ -10,6 +10,7 @@ export const wrapper = recipe({
     padding: '14px 16px',
     width: 'auto',
     backgroundColor: theme.colors.white,
+    borderTop: `1px solid ${theme.colors.neutralGray200}`,
     borderRadius: '0 0 8px 8px',
   },
   variants: {

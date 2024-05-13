@@ -15,11 +15,11 @@ const meta = {
     subtitle: {
       description: '부제',
     },
-    hasInfo: {
-      description: '정보 아이콘 유무',
+    information: {
+      description: '정보 유무에 따라 정보 아이콘 나타남',
     },
-    hasCloseButton: {
-      description: '닫기 버튼 유무',
+    onClick: {
+      description: '닫기 기능',
     },
     width: {
       type: 'string',
@@ -35,15 +35,15 @@ export const Default: Story = ({
   title = '헤더 타이틀',
   subtitle = '서브 타이틀',
   width = '480px',
-  hasInfo = true,
-  hasCloseButton = true,
+  information,
+  onClick
 }: Args) => (
   <div style={{ padding: '20px', width: '100%', backgroundColor: 'lightgray' }}>
     <ModalHeader
       title={title}
       subtitle={subtitle}
-      hasInfo={hasInfo}
-      hasCloseButton={hasCloseButton}
+      information={information}
+      onClick={onClick}
       width={width}
     />
   </div>
@@ -52,7 +52,6 @@ export const Default: Story = ({
 Default.args = {
   title: '헤더 타이틀',
   subtitle: '서브 타이틀',
-  hasInfo: true,
-  hasCloseButton: true,
+  information: '',
   width: '480px',
 }
