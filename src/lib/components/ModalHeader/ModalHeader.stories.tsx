@@ -1,9 +1,8 @@
 import { Args, Meta, StoryObj } from '@storybook/react'
-import React from 'react'
 import { ModalHeader } from '.'
 
 const meta = {
-  title: 'Component/ModalHeader',
+  title: 'Component/Modal/ModalHeader',
   component: ModalHeader,
   parameters: {
     layout: 'centered',

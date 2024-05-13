@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { LabelInput } from '@/lib'
 
 const meta = {
-  title: 'Component/Input/LabelInput',
+  title: 'Component/Form/Input/LabelInput',
   component: LabelInput,
   parameters: {
     layout: 'centered',

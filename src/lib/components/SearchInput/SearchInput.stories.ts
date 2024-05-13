@@ -1,9 +1,9 @@
 import type { Meta, StoryObj } from '@storybook/react'
-import { Textarea } from '@/lib'
+import { SearchInput } from '@/lib'
 
 const meta = {
-  title: 'Component/Form/Input/Textarea',
-  component: Textarea,
+  title: 'Component/Form/Input/SearchInput',
+  component: SearchInput,
   parameters: {
     layout: 'centered',
   },
@@ -17,22 +17,31 @@ const meta = {
       type: 'string',
       description: 'placeholder로 지정할 텍스트 입력',
     },
-    state: {
-      options: ['success', 'error'],
-      control: { type: 'select' },
-      description: '텍스트인풋 상태 선택',
+    maxWidth: {
+      control: {
+        type: 'text',
+      },
+      description: '텍스트인풋의 가로 길이 설정 ex) 372px, 100%',
+    },
+    size: {
+      control: {
+        type: 'select',
+        options: ['sm', 'md'],
+        default: 'md',
+      },
+      description: '사이즈',
     },
   },
-} satisfies Meta<typeof Textarea>
+} satisfies Meta<typeof SearchInput>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    placeholder: 'Placeholder',
+    maxWidth: '200px',
+    placeholder: '검색어 입력해주세요.',
     value: undefined,
     onChange: undefined,
-    disabled: false,
   },
 }

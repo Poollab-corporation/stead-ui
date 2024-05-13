@@ -2,7 +2,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { TagList } from '@/lib'
 
 const meta = {
-  title: 'Component/TagList',
+  title: 'Component/Tag/TagList',
   component: TagList,
   parameters: {
     layout: 'centered',
