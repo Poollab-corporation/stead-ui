@@ -1,6 +1,10 @@
 import { components, OptionProps } from 'react-select'
-import * as Styles from './styles'
-
+import {
+  memberOptionLabel,
+  memberOptionContent,
+  memberOptionLabelText,
+  googleIcon,
+} from './styles.css.ts'
 import { Avatar } from '@/lib'
 import { IMAGES } from '@/constants'
 
@@ -19,13 +23,13 @@ export const SelectMemberOptionLabel = (props: OptionProps<FormatOptionProps>) =
 
   return (
     <components.Option {...props}>
-      <Styles.MemberOptionLabel>
-        <Styles.MemberTextWrapper>
+      <div className={memberOptionLabel}>
+        <div className={memberOptionContent}>
           <Avatar alt={label} src={image} size="sm" />
-          <Styles.MemberOptionLabelText>{label}</Styles.MemberOptionLabelText>
-        </Styles.MemberTextWrapper>
-        {google_connect && <Styles.GoogleIcon src={IMAGES.GOOGLE_CALENDAR} alt="" />}
-      </Styles.MemberOptionLabel>
+          <span className={memberOptionLabelText}>{label}</span>
+        </div>
+        {google_connect && <img className={googleIcon} src={IMAGES.GOOGLE_CALENDAR} alt="" />}
+      </div>
     </components.Option>
   )
 }

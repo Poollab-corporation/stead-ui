@@ -1,4 +1,4 @@
-import * as Styles from './styles'
+import { formatOptionLabel, formatOptionLabelText } from './styles.css.ts'
 import { Button } from '@/lib'
 
 interface FormCreateLabelProps {
@@ -13,18 +13,17 @@ export const FormCreateLabel = ({ searchValue, onCreate }: FormCreateLabelProps)
   }
 
   return (
-    <Styles.FormatOptionLabel>
-      <Styles.FormatOptionLabelText>검색 결과가 없습니다.</Styles.FormatOptionLabelText>
+    <div className={formatOptionLabel}>
+      <p className={formatOptionLabelText}>검색 결과가 없습니다.</p>
       {searchValue && (
         <Button
           size="xs"
           state="secondary"
           style="fill-weak"
-          width="fit-content"
           text={`"${searchValue}" 선택`}
           onClick={handleSelect}
         />
       )}
-    </Styles.FormatOptionLabel>
+    </div>
   )
 }
