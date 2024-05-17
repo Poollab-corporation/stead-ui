@@ -5,6 +5,7 @@ export { Badge } from './components/Badge'
 export { Button } from './components/Button'
 export { CheckBox } from './components/CheckBox'
 export { Chip } from './components/Chip'
+export { Dropdown }from "./components/Dropdowns"
 export { Empty } from './components/Empty'
 export { ErrorMessage } from './components/ErrorMessage'
 export { FileInput } from './components/FileInput'

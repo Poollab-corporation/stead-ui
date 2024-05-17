@@ -1,7 +1,7 @@
-import React from 'react'
 import './globalTheme.css'
-import { NavigationTabs } from './lib/components/NavigationTabs'
+import { NavigationTabs } from './lib'
 import { TabButtonType } from './lib/components/NavigationTabs/NavigationTabs.interface'
+import { Dropdown } from './lib'
 
 function App() {
   const BUTTONS: TabButtonType[] = [
@@ -33,6 +33,11 @@ function App() {
       <div style={{ padding: '40px', width: '600px' }}>
         <NavigationTabs buttons={BUTTONS} contents={CONTENTS} />
       </div>
+      <Dropdown button={<button>Dropdown</button>}>
+        <Dropdown.Item>Item 1</Dropdown.Item>
+        <Dropdown.Item>Item 2</Dropdown.Item>
+        <Dropdown.Item>Item 3</Dropdown.Item>
+      </Dropdown>
     </div>
   )
 }
