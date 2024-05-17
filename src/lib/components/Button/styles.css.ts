@@ -1,8 +1,7 @@
 import { recipe } from '@vanilla-extract/recipes'
 import { theme } from '@/globalTheme.css.ts'
-import { keyframes, style } from '@vanilla-extract/css'
+import { keyframes} from '@vanilla-extract/css'
 
-export const parent = style({});
 export const wrapper = recipe({
   base : {
     display: 'flex',
@@ -86,10 +85,10 @@ export const wrapper = recipe({
             backgroundColor : theme.colors.neutralGray200,
             border : 'none'
           },
-          [`${parent} &:not(:disabled):hover`] : {
+          [`&:not(:disabled):hover`] : {
             backgroundColor : theme.colors.blue600
           },
-          [`${parent} &:not(:disabled):active`] : {
+          [`&:not(:disabled):active`] : {
             backgroundColor : theme.colors.blue700
           },
         }
@@ -110,10 +109,10 @@ export const wrapper = recipe({
             backgroundColor : theme.colors.neutralGray200,
             border : 'none'
           },
-          [`${parent} &:not(:disabled):hover`] : {
+          [`&:not(:disabled):hover`] : {
             backgroundColor : theme.colors.blue200
           },
-          [`${parent} &:not(:disabled):active`] : {
+          [`&:not(:disabled):active`] : {
             backgroundColor : theme.colors.blue300
           },
         }
@@ -135,11 +134,11 @@ export const wrapper = recipe({
               backgroundColor : theme.colors.white,
               border : `1px solid ${theme.colors.neutralGray200}`
           },
-          [`${parent} &:not(:disabled):hover`] : {
+          [`&:not(:disabled):hover`] : {
             backgroundColor : theme.colors.blue200,
             border : `1px solid ${theme.colors.blue200}`
           },
-          [`${parent} &:not(:disabled):active`] : {
+          [`&:not(:disabled):active`] : {
             backgroundColor : theme.colors.blue300
           },
         }
@@ -160,10 +159,10 @@ export const wrapper = recipe({
             backgroundColor : theme.colors.white,
             border : 'none'
           },
-          [`${parent} &:not(:disabled):hover`] : {
+          [`&:not(:disabled):hover`] : {
             backgroundColor : theme.colors.blue100,
           },
-          [`${parent} &:not(:disabled):active`] : {
+          [`&:not(:disabled):active`] : {
             backgroundColor : theme.colors.blue200
           },
         }
@@ -185,10 +184,10 @@ export const wrapper = recipe({
             backgroundColor : theme.colors.neutralGray200,
             border : 'none'
           },
-          [`${parent} &:not(:disabled):hover`] : {
+          [`&:not(:disabled):hover`] : {
             backgroundColor : theme.colors.neutralGray900,
           },
-          [`${parent} &:not(:disabled):active`] : {
+          [`&:not(:disabled):active`] : {
             backgroundColor : theme.colors.neutralGray200,
             border : 'none'
           },
@@ -210,10 +209,10 @@ export const wrapper = recipe({
             backgroundColor : theme.colors.neutralGray200,
             border : 'none'
           },
-          [`${parent} &:not(:disabled):hover`] : {
+          [`&:not(:disabled):hover`] : {
             backgroundColor : theme.colors.neutralGray200,
           },
-          [`${parent} &:not(:disabled):active`] : {
+          [`&:not(:disabled):active`] : {
             backgroundColor : theme.colors.neutralGray300,
             border: 'none'
           },
@@ -236,11 +235,11 @@ export const wrapper = recipe({
             backgroundColor : theme.colors.white,
             border : `1px solid ${theme.colors.neutralGray200}`
           },
-          [`${parent} &:not(:disabled):hover`] : {
+          [`&:not(:disabled):hover`] : {
             backgroundColor : theme.colors.neutralGray200,
             border: `1px solid ${theme.colors.neutralGray200}`
           },
-          [`${parent} &:not(:disabled):active`] : {
+          [`&:not(:disabled):active`] : {
             backgroundColor : theme.colors.neutralGray300,
             border : `1px solid ${theme.colors.neutralGray300}`
           },
@@ -262,10 +261,10 @@ export const wrapper = recipe({
             backgroundColor : theme.colors.white,
             border : 'none'
           },
-          [`${parent} &:not(:disabled):hover`] : {
+          [`&:not(:disabled):hover`] : {
             backgroundColor : theme.colors.neutralGray100,
           },
-          [`${parent} &:not(:disabled):active`] : {
+          [`&:not(:disabled):active`] : {
             backgroundColor : theme.colors.neutralGray300,
             border: 'none'
           },
@@ -288,10 +287,10 @@ export const wrapper = recipe({
             backgroundColor : theme.colors.neutralGray100,
             border: 'none'
           },
-          [`${parent} &:not(:disabled):hover`] : {
+          [`&:not(:disabled):hover`] : {
             backgroundColor : theme.colors.red600,
           },
-          [`${parent} &:not(:disabled):active`] : {
+          [`&:not(:disabled):active`] : {
             backgroundColor : theme.colors.red700,
           },
         }
@@ -312,10 +311,10 @@ export const wrapper = recipe({
             backgroundColor : theme.colors.neutralGray100,
             border: 'none'
           },
-          [`${parent} &:not(:disabled):hover`] : {
+          [`&:not(:disabled):hover`] : {
             backgroundColor : theme.colors.red200,
           },
-          [`${parent} &:not(:disabled):active`] : {
+          [`&:not(:disabled):active`] : {
             backgroundColor : theme.colors.red300,
           },
         }
@@ -337,11 +336,11 @@ export const wrapper = recipe({
             backgroundColor : theme.colors.neutralGray100,
             border: `1px solid ${theme.colors.neutralGray200}`
           },
-          [`${parent} &:not(:disabled):hover`] : {
+          [`&:not(:disabled):hover`] : {
             backgroundColor : theme.colors.red100,
             border: `1px solid ${theme.colors.red100}`
           },
-          [`${parent} &:not(:disabled):active`] : {
+          [`&:not(:disabled):active`] : {
             backgroundColor : theme.colors.red200,
           },
         }
@@ -362,10 +361,10 @@ export const wrapper = recipe({
             backgroundColor : theme.colors.neutralGray100,
             border: 'none'
           },
-          [`${parent} &:not(:disabled):hover`] : {
+          [`&:not(:disabled):hover`] : {
             backgroundColor : theme.colors.red100,
           },
-          [`${parent} &:not(:disabled):active`]: {
+          [`&:not(:disabled):active`]: {
             backgroundColor: theme.colors.red200,
           },
         }
