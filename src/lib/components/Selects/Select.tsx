@@ -5,7 +5,7 @@ import { default as ReactSelect } from 'react-select'
 import Creatable from 'react-select/creatable'
 
 import { SelectProps } from './Select.interface'
-import { selectStyles } from './Select.styles'
+import { selectStyles } from './SelectStyles.ts'
 
 import { DropdownIndicator } from './DropdownIndicator'
 import { CustomOptionLabel } from './CustomOptionLabel'
