@@ -1,4 +1,5 @@
 import { Args, Meta, StoryObj } from '@storybook/react'
+import React from 'react'
 import { ModalHeader } from '.'
 
 const meta = {
@@ -36,7 +37,7 @@ export const Default: Story = ({
   subtitle = '서브 타이틀',
   width = '480px',
   information,
-  onClick
+  onClick,
 }: Args) => (
   <div style={{ padding: '20px', width: '100%', backgroundColor: 'lightgray' }}>
     <ModalHeader
