@@ -6,14 +6,21 @@ interface LabelProps {
   size?: 'md' | 'lg'
   isRequired?: boolean
   hasInfo?: boolean
+  isActive?: boolean
 }
 
-export const Label = ({ label, size = 'md', isRequired = false, hasInfo = false }: LabelProps) => {
+export const Label = ({
+  label,
+  size = 'md',
+  isRequired = false,
+  hasInfo = false,
+  isActive = false,
+}: LabelProps) => {
   return (
     <div className={wrapper({ size })}>
-      <span className={text({ size })}>{label}</span>
+      <span className={text({ size, isActive })}>{label}</span>
       {isRequired && <span className={required({ size })}>*</span>}
-      {hasInfo && <Icon icon="icon/info-line" color="neutralGray800" />}
+      {hasInfo && <Icon icon="icon/info-line" />}
     </div>
   )
 }

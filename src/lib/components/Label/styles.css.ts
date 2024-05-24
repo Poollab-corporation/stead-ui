@@ -17,7 +17,7 @@ export const wrapper = recipe({
 
 export const text = recipe({
   base: {
-    marginBottom: '-2px',
+    marginBottom: '-4px',
     fontWeight: theme.fontWeights.medium,
     color: theme.colors.neutralGray800,
   },
@@ -28,6 +28,14 @@ export const text = recipe({
       },
       lg: {
         ...theme.fonts[16],
+      },
+    },
+    isActive: {
+      true: {
+        color: theme.colors.neutralGray800,
+      },
+      false: {
+        color: theme.colors.neutralGray500,
       },
     },
   },
