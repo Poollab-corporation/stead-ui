@@ -1,13 +1,12 @@
-import { useRecoilState } from 'recoil'
 import { Icon } from '../../Icon'
 import { Label } from '../../Label'
 import { TabButtonType } from '../NavigationTabs.interface'
-import { SelectedTabAtom } from '../atom'
 import { tabButtonStyle } from '../styles.css'
 
 interface TabButtonProps extends TabButtonType {
   index: number
   isActive: boolean
+  selectedTab: number
   onClick: (index: number) => void
 }
 
@@ -19,10 +18,9 @@ export const TabButton = ({
   radio,
   label,
   isActive,
+  selectedTab,
   onClick,
 }: TabButtonProps) => {
-  const [selectedTab, setSelectedTab] = useRecoilState(SelectedTabAtom)
-
   const iconColor = isActive ? 'neutralGray800' : 'neutralGray500'
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLLIElement>) => {
@@ -38,11 +36,11 @@ export const TabButton = ({
 
   const findNextButton = (key: string, currentButton: any) => {
     if (key === 'ArrowRight' && selectedTab < 2) {
-      setSelectedTab(selectedTab + 1)
+      onClick(selectedTab + 1)
     }
 
     if (key === 'ArrowLeft' && selectedTab > 0) {
-      setSelectedTab(selectedTab - 1)
+      onClick(selectedTab - 1)
     }
 
     const direction = key === 'ArrowRight' ? 'ArrowRight' : 'ArrowLeft'

@@ -23,6 +23,7 @@ export const TabButtonList = ({
           index={index}
           size={size}
           isActive={selectedTab === index}
+          selectedTab={selectedTab}
           onClick={onClick}
           {...button}
         />
