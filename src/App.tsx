@@ -31,10 +31,7 @@ function App() {
         <h1>STEAD UI</h1>
       </div>
       <div style={{ padding: '40px', width: '600px' }}>
-        <NavigationTabs>
-          <NavigationTabs.TabButtonList buttons={BUTTONS} />
-          <NavigationTabs.TabContentList contents={CONTENTS} />
-        </NavigationTabs>
+        <NavigationTabs buttons={BUTTONS} contents={CONTENTS} />
       </div>
     </div>
   )

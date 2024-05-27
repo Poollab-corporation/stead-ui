@@ -1,16 +1,13 @@
-import { useRecoilValue } from 'recoil'
 import { TabContentType } from '../NavigationTabs.interface'
-import { TabContent } from './TabContent'
-import { SelectedTabAtom } from '../atom'
 import { tabContentListStyle } from '../styles.css'
+import { TabContent } from './TabContent'
 
 interface TabContentListProps {
   contents: TabContentType[]
+  selectedTab: number
 }
 
-export const TabContentList = ({ contents }: TabContentListProps) => {
-  const selectedTab = useRecoilValue(SelectedTabAtom)
-
+export const TabContentList = ({ contents, selectedTab }: TabContentListProps) => {
   return (
     <div className={tabContentListStyle}>
       {contents.map((content, index) => (

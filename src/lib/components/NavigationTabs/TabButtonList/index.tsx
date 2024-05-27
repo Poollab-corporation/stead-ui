@@ -1,21 +1,20 @@
-import { useRecoilState } from 'recoil'
 import { TabButtonType } from '../NavigationTabs.interface'
-import { SelectedTabAtom } from '../atom'
 import { tabButtonListStyle } from '../styles.css'
 import { TabButton } from './TabButton'
 
 interface TabButtonListProps {
   size?: 'md' | 'lg'
   buttons: TabButtonType[]
+  selectedTab: number
+  onClick: (index: number) => void
 }
 
-export const TabButtonList = ({ size = 'md', buttons }: TabButtonListProps) => {
-  const [selectedTab, setSelectedTab] = useRecoilState(SelectedTabAtom)
-
-  const handleClick = (index: number) => {
-    setSelectedTab(index)
-  }
-
+export const TabButtonList = ({
+  size = 'md',
+  buttons,
+  selectedTab,
+  onClick,
+}: TabButtonListProps) => {
   return (
     <ul className={tabButtonListStyle}>
       {buttons.map((button, index) => (
@@ -24,7 +23,7 @@ export const TabButtonList = ({ size = 'md', buttons }: TabButtonListProps) => {
           index={index}
           size={size}
           isActive={selectedTab === index}
-          onClick={handleClick}
+          onClick={onClick}
           {...button}
         />
       ))}
