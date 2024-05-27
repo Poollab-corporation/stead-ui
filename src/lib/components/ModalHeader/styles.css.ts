@@ -6,7 +6,7 @@ export const wrapper = style({
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'space-between',
-  padding: '16px 20px',
+  padding: '24px 20px',
   width: 'auto',
   backgroundColor: theme.colors.white,
   borderRadius: '8px 8px 0 0',
