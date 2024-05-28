@@ -1,19 +1,6 @@
-import {  style } from '@vanilla-extract/css'
+import { style } from '@vanilla-extract/css'
 import { theme } from '@/globalTheme.css.ts'
 import { recipe } from '@vanilla-extract/recipes'
-
-export const dropdownIndicatorArrow = recipe({
-  base: {
-    transition: 'all 200ms ease-in-out',
-  },
-  variants: {
-    isMenuOpen: {
-      true: {
-        transform: 'rotate(180deg)',
-      },
-    },
-  },
-})
 
 export const formatGroupLabel = style({
   height: '36px',
@@ -71,14 +58,6 @@ export const memberOptionLabelText = style({
   textOverflow: 'ellipsis',
   overflow: 'hidden',
   whiteSpace: 'nowrap',
-})
-
-export const multiValueRemoveButton = style({
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-  width: '16px',
-  height: '16px',
 })
 
 export const googleIcon = style({

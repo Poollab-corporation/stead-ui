@@ -1,2 +1,2 @@
 export { Select } from './Select'
-export { SelectMemberOptionLabel } from './SelectMemberOptionLabel'
+export { SelectMemberOptionLabel } from './OptionLabel/SelectMemberOptionLabel.tsx'

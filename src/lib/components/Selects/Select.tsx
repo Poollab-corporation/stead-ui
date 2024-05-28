@@ -7,12 +7,12 @@ import { SelectProps } from './Select.interface'
 import { selectStyles } from './Select.styles'
 
 import { DropdownIndicator } from './DropdownIndicator'
-import { CustomOptionLabel } from './CustomOptionLabel'
-import { FormatGroupLabel } from './FormatGroupLabel'
+import { CustomOptionLabel } from './OptionLabel/CustomOptionLabel.tsx'
+import { FormatGroupLabel } from './OptionLabel/FormatGroupLabel.tsx'
 import { SelectMultiValueRemoveButton } from './SelectMultiValueRemoveButton'
-import { SelectDefaultOption } from './SelectDefaultOption'
-import { SelectDefaultMultiValueLabel } from './SelectDefaultMultiValueLabel'
-import { FormCreateLabel } from './FormatCreateLabel'
+import { SelectDefaultOption } from './OptionLabel/SelectDefaultOption.tsx'
+import { SelectDefaultMultiValueLabel } from './OptionLabel/SelectDefaultMultiValueLabel.tsx'
+import { FormCreateLabel } from './OptionLabel/FormatCreateLabel.tsx'
 
 export const Select = ({
   defaultValue,

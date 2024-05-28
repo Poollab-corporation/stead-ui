@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import { Select } from './Select'
-import { SelectDefaultOption } from './SelectDefaultOption'
-import { SelectMemberOptionLabel } from './SelectMemberOptionLabel'
+import { SelectDefaultOption } from './OptionLabel/SelectDefaultOption'
+import { SelectMemberOptionLabel } from './OptionLabel/SelectMemberOptionLabel'
 
 const meta = {
   title: 'Component/Select/Select',
