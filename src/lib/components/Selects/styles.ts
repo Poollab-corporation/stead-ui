@@ -37,6 +37,7 @@ export const Badge = styled.span`
 export const MemberOptionLabel = styled.div`
   display: flex;
   width: 100%;
+  min-width: 96px;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -51,9 +52,11 @@ export const MemberTextWrapper = styled.div`
 `
 
 export const MemberOptionLabelText = styled.span`
-  color: ${(props) => props.theme.colors.neutralGrey700};
-  font-weight: ${(props) => props.theme.fontWeights.medium};
-  ${(props) => props.theme.fonts[14]}
+  color: #4E5968;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  letter-spacing: -0.01em;
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;

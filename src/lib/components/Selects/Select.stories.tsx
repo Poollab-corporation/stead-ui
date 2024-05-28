@@ -58,6 +58,7 @@ export const Default: Story = {
         image:
           'https://s3.ap-northeast-2.amazonaws.com/stead-data/enterprises/324/users/iJ7UFpTpjDHrcRG356/profile20240402101324.jpg',
         name: '김철수',
+        google_connect: true,
       },
     ],
   },
