@@ -1,40 +1,39 @@
 import { CSSObjectWithLabel, GroupBase, StylesConfig } from 'react-select'
 import { OptionStyleProps, StylesProps } from './Select.interface'
-import { theme } from '@/globalTheme.css.ts'
 
 export function selectStyles<
   Option,
   IsMulti extends boolean,
   Group extends GroupBase<Option> = GroupBase<Option>,
 >({
-  controlMinWidth,
-  controlHeight,
-  controlMinHeight,
-  controlBackgroundColor,
-  controlBorder,
-  controlBorderRadius,
-  controlBoxShadow,
-  valueContainerPaddingLeft,
-  inputHeight,
-  inputMargin,
-  inputPadding,
-  singleValueFontWeight,
-  indicatorsContainerPaddingRight,
-  menuWidth,
-  menuPortalZIndex,
-  menuListPadding,
-  optionHeight,
-  optionBorderRadius,
-  optionColor,
-  optionFontSize,
-  optionLineHeight,
-  optionPadding,
-  optionMinWidth,
-  menuPosition = 'left',
-  isHovered = true,
-  isSearchable = false,
-  isNoDropdownIndicator = false,
-}: StylesProps): StylesConfig<Option, IsMulti, Group> {
+    controlMinWidth,
+    controlHeight,
+    controlMinHeight,
+    controlBackgroundColor,
+    controlBorder,
+    controlBorderRadius,
+    controlBoxShadow,
+    valueContainerPaddingLeft,
+    inputHeight,
+    inputMargin,
+    inputPadding,
+    singleValueFontWeight,
+    indicatorsContainerPaddingRight,
+    menuWidth,
+    menuPortalZIndex,
+    menuListPadding,
+    optionHeight,
+    optionBorderRadius,
+    optionColor,
+    optionFontSize,
+    optionLineHeight,
+    optionPadding,
+    optionMinWidth,
+    menuPosition = 'left',
+    isHovered = true,
+    isSearchable = false,
+    isNoDropdownIndicator = false,
+  }: StylesProps): StylesConfig<Option, IsMulti, Group> {
   return {
     control: (base: CSSObjectWithLabel, { isFocused, isDisabled }) => ({
       ...base,
@@ -42,24 +41,20 @@ export function selectStyles<
       height: controlHeight ? controlHeight : 'auto',
       minHeight: controlMinHeight ? controlMinHeight : '40px',
       backgroundColor: isDisabled
-        ? theme.colors.neutralGray100
+        ? '#F2F4F6'
         : controlBackgroundColor
           ? controlBackgroundColor
-          : theme.colors.white,
+          : '#fff',
       border: controlBorder,
       borderWidth: '1px',
-      borderColor: isFocused ? theme.colors.blue500 : theme.colors.neutralGray200,
+      borderColor: isFocused ? '#468EFF' : '#E5E8EB',
       borderRadius: controlBorderRadius ? controlBorderRadius : '6px',
-      boxShadow: controlBoxShadow
-        ? controlBoxShadow
-        : isFocused
-          ? `0 0 0 0.5px ${theme.colors.blue500}`
-          : 'none',
+      boxShadow: controlBoxShadow ? controlBoxShadow : isFocused ? '0 0 0 0.5px #468EFF' : 'none',
       paddingLeft: '0',
       fontSize: '14px',
       '&:hover': isHovered &&
         !isFocused && {
-          borderColor: theme.colors.neutralGray600,
+          borderColor: '#6B7684',
         },
     }),
     valueContainer: (provided: CSSObjectWithLabel) => ({
@@ -69,7 +64,7 @@ export function selectStyles<
     }),
     singleValue: (provided: CSSObjectWithLabel) => ({
       ...provided,
-      color: theme.colors.neutralGray800,
+      color: '#333D4B',
       fontSize: '14px',
       fontWeight: singleValueFontWeight ? singleValueFontWeight : '500',
       lineHeight: '16px',
@@ -79,7 +74,7 @@ export function selectStyles<
       ...styles,
       padding: '4px 0',
       '&:not(:first-of-type)': {
-        borderTop: `1px solid ${theme.colors.neutralGray100}`,
+        borderTop: '1px solid #F2F4F6',
       },
     }),
     groupHeading: (styles: CSSObjectWithLabel) => ({
@@ -99,7 +94,7 @@ export function selectStyles<
     }),
     placeholder: (styles: CSSObjectWithLabel) => ({
       ...styles,
-      color: theme.colors.neutralGray400,
+      color: '#B0B8C1',
       fontSize: '14px',
       fontWeight: '500',
       lineHeight: '16px',
@@ -118,12 +113,12 @@ export function selectStyles<
       ...base,
       width: menuWidth ? menuWidth : '100%',
       right: menuPosition === 'right' ? '0' : '',
-      background: theme.colors.white,
+      background: '#fff',
       border: '0',
       borderRadius: '4px',
       boxShadow: '0px 12px 40px 0px rgba(161, 176, 203, 0.30)',
       marginTop: '8px',
-      zIndex: theme.zIndex.overlay,
+      zIndex: 10,
       overflow: 'auto',
     }),
     menuList: (styles: CSSObjectWithLabel) => ({
@@ -141,23 +136,19 @@ export function selectStyles<
         height: !isNew && (optionHeight ? optionHeight : '44px'),
         display: 'flex',
         alignItems: 'center',
-        background: isFocused && !isSelected ? theme.colors.neutralGray50 : theme.colors.white,
+        background: isFocused && !isSelected ? '#F9FAFB' : '#fff',
         boxShadow: '',
         borderRadius: optionBorderRadius ? optionBorderRadius : '6px',
-        color: isSelected
-          ? theme.colors.blue500
-          : optionColor
-            ? optionColor
-            : theme.colors.neutralGray800,
+        color: isSelected ? '#468EFF' : optionColor ? optionColor : '#333D4B',
         fontSize: optionFontSize ? optionFontSize : '14px',
         fontWeight: '500',
         lineHeight: optionLineHeight ? optionLineHeight : '16px',
         letterSpacing: '-0.01em',
         padding: optionPadding ? optionPadding : '8px 14px',
         cursor: isFocused ? 'pointer' : 'default',
-        zIndex: theme.zIndex.base,
+        zIndex: 1,
         ':active': {
-          backgroundColor: theme.colors.neutralGray50,
+          backgroundColor: '#F9FAFB',
         },
         div: {
           width: isNew && '100%',
@@ -173,7 +164,7 @@ export function selectStyles<
       return {
         ...styles,
         alignItems: 'center',
-        backgroundColor: theme.colors.neutralGray100,
+        backgroundColor: '#F2F4F6',
         borderRadius: '6px',
         padding: '6px',
       }
@@ -187,12 +178,12 @@ export function selectStyles<
     }),
     menuPortal: (styles: CSSObjectWithLabel) => ({
       ...styles,
-      zIndex: menuPortalZIndex ? menuPortalZIndex : theme.zIndex.header,
+      zIndex: menuPortalZIndex ? menuPortalZIndex : 50,
     }),
     noOptionsMessage: (styles: CSSObjectWithLabel) => ({
       ...styles,
       minWidth: '160px',
-      color: theme.colors.neutralGray400,
+      color: '#B0B8C1',
       borderRadius: '8px',
       fontSize: '14px',
       fontWeight: '500',
