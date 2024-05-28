@@ -26,7 +26,7 @@ export const wrapper = recipe({
         backgroundColor: theme.colors.blue200,
       },
       success: {
-        backgroundColor: theme.colors.badgeGreenBackground,
+        backgroundColor: theme.colors.green200,
       },
       danger: {
         backgroundColor: theme.colors.red200,
@@ -45,21 +45,23 @@ export const labelStyle = recipe({
   variants: {
     size: {
       sm: {
+        marginBottom: '-1px',
         ...theme.fonts[10],
       },
       md: {
+        marginBottom: '-2px',
         ...theme.fonts[11],
       },
     },
     status: {
       default: {
-        color: theme.colors.neutralGray800,
+        color: theme.colors.neutralGray700,
       },
       info: {
         color: theme.colors.blue700,
       },
       success: {
-        color: theme.colors.badgeGreen,
+        color: theme.colors.green700,
       },
       danger: {
         color: theme.colors.red800,

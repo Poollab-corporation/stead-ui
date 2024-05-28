@@ -21,13 +21,21 @@ const meta = {
       options: ['sm', 'md'],
       description: '사이즈',
     },
-    icon: {
+    leadingIcon: {
       name: 'leadingIcon',
       table: {
         type: { summary: 'select' },
       },
       options: [undefined, ...Object.keys(icons)],
-      description: '아이콘',
+      description: '라벨 기준 왼쪽 아이콘',
+    },
+    trailingIcon: {
+      name: 'trailingIcon',
+      table: {
+        type: { summary: 'select' },
+      },
+      options: [undefined, ...Object.keys(icons)],
+      description: '라벨 기준 오른쪽 아이콘',
     },
   },
 } satisfies Meta<typeof Chip>
@@ -39,7 +47,8 @@ export const Default: Story = {
   args: {
     status: 'default',
     size: 'md',
-    icon: 'icon/check-line',
+    leadingIcon: 'icon/check-line',
+    trailingIcon: 'icon/info-line',
     label: 'Status chip',
   },
 }
