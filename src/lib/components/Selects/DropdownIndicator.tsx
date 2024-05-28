@@ -1,6 +1,6 @@
 'use client'
 
-import { dropdownIndicatorArrow } from './styles.css.ts'
+import * as Styles from './styles'
 import { DropdownIndicatorProps, components } from 'react-select'
 import { colorType } from '@/lib/components/Icon'
 import { Icon } from '@/lib'
@@ -18,13 +18,9 @@ export const DropdownIndicator = (props: DropdownIndicatorProps) => {
 
   return (
     <components.DropdownIndicator {...props}>
-      <span
-        className={dropdownIndicatorArrow({
-          isMenuOpen: props.selectProps.menuIsOpen,
-        })}
-      >
+      <Styles.DropdownIndicatorArrow $isMenuOpen={props.selectProps.menuIsOpen}>
         <Icon icon="icon/down-solid" color={getIconColor()} />
-      </span>
+      </Styles.DropdownIndicatorArrow>
     </components.DropdownIndicator>
   )
 }

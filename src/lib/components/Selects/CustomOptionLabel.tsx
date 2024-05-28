@@ -1,6 +1,6 @@
 'use client'
 
-import { optionLabel, optionLabelText, chip } from './styles.css.ts'
+import * as Styles from './styles'
 import React from 'react'
 import { Icon, colorType, IconNames } from '@/lib/components/Icon'
 import { Tooltip } from '@/lib'
@@ -28,16 +28,12 @@ export const CustomOptionLabel = ({
     disabled={!isOverflowTooltip || (maxLength ? label.length <= maxLength : false)}
     direction="right"
   >
-    <div className={optionLabel}>
+    <Styles.OptionLabel>
       {iconSource && <Icon icon={iconSource} color={iconColor} />}
-      <span
-        className={optionLabelText({
-          isOverflowTooltip,
-        })}
-      >
+      <Styles.OptionLabelText $isOverflowTooltip={isOverflowTooltip}>
         {label}
-      </span>
-      {badge && <span className={chip}>{badge}</span>}
-    </div>
+      </Styles.OptionLabelText>
+      {badge && <Styles.Badge>{badge}</Styles.Badge>}
+    </Styles.OptionLabel>
   </Tooltip>
 )

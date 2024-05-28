@@ -1,6 +1,6 @@
-import { formatGroupLabel } from './styles.css.ts'
+import * as Styles from './styles'
 import { GroupBase } from 'react-select'
 
 export const FormatGroupLabel = (data: GroupBase<any>) => {
-  return <div className={formatGroupLabel}>{data.label}</div>
+  return <Styles.FormatGroupLabel>{data.label}</Styles.FormatGroupLabel>
 }

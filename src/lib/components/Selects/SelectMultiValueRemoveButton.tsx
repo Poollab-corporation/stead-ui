@@ -1,13 +1,13 @@
-import { multiValueRemoveButton } from './styles.css.ts'
+import * as Styles from './styles'
 import { components, MultiValueRemoveProps } from 'react-select'
 import { Button } from '@/lib'
 
 export const SelectMultiValueRemoveButton = (props: MultiValueRemoveProps) => {
   return (
     <components.MultiValueRemove {...props}>
-      <span className={multiValueRemoveButton}>
+      <Styles.MultiValueRemoveButton>
         <Button leadingIcon="icon/cancle-solid" state="secondary" style="mono" />
-      </span>
+      </Styles.MultiValueRemoveButton>
     </components.MultiValueRemove>
   )
 }
