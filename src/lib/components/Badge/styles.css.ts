@@ -3,34 +3,34 @@ import { theme } from '@/globalTheme.css.ts'
 
 export const badge = recipe({
   base: {
-    display: 'inline-block',
+    display: 'inline-flex',
+    alignItems: 'center',
     padding: '2px 6px',
     maxWidth: '80px',
+    height: '20px',
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     whiteSpace: 'nowrap',
   },
   variants: {
     type: {
-      standard: {
-        backgroundColor: theme.colors.blue100,
-        color: theme.colors.blue500,
-      },
-      primary: {
+      blue: {
         backgroundColor: theme.colors.blue500,
-        color: theme.colors.white,
       },
-      warning: {
+      skyblue: {
+        backgroundColor: theme.colors.blue100,
+      },
+      red: {
         backgroundColor: theme.colors.red100,
-        color: theme.colors.red500,
       },
       gray: {
         backgroundColor: theme.colors.neutralGray100,
-        color: theme.colors.neutralGray700,
       },
-      proceeding: {
+      orange: {
         backgroundColor: theme.colors.orange200,
-        color: theme.colors.orange700,
+      },
+      green: {
+        backgroundColor: theme.colors.green200,
       },
     },
     isDisabled: {
@@ -43,7 +43,36 @@ export const badge = recipe({
     },
   },
   defaultVariants: {
-    type: 'standard',
+    type: 'skyblue',
     isDisabled: false,
+  },
+})
+
+export const label = recipe({
+  base: {
+    ...theme.fonts[11],
+    fontWeight: theme.fontWeights.medium,
+  },
+  variants: {
+    type: {
+      blue: {
+        color: theme.colors.white,
+      },
+      skyblue: {
+        color: theme.colors.blue500,
+      },
+      red: {
+        color: theme.colors.red500,
+      },
+      gray: {
+        color: theme.colors.neutralGray700,
+      },
+      orange: {
+        color: theme.colors.orange700,
+      },
+      green: {
+        color: theme.colors.green700,
+      },
+    },
   },
 })
