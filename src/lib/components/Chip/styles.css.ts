@@ -32,7 +32,7 @@ export const wrapper = recipe({
         backgroundColor: theme.colors.red200,
       },
       warning: {
-        backgroundColor: theme.colors.systemOrange100,
+        backgroundColor: theme.colors.orange200,
       },
     },
   },
@@ -65,7 +65,7 @@ export const labelStyle = recipe({
         color: theme.colors.red800,
       },
       warning: {
-        color: theme.colors.systemOrange500,
+        color: theme.colors.orange700,
       },
     },
   },
