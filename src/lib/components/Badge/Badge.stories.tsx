@@ -15,7 +15,7 @@ const meta = {
       description: '뱃지 텍스트',
     },
     type: {
-      options: ['blue', 'skyblue', 'red', 'gray', 'orange', 'green'],
+      options: ['blueStrong', 'blue', 'red', 'gray', 'orange', 'green'],
       control: { type: 'select' },
       description: '뱃지 타입',
     },
@@ -39,7 +39,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     text: '직접 추가',
-    type: 'skyblue',
+    type: 'blue',
     isDisabled: false,
     rounded: 4,
   },

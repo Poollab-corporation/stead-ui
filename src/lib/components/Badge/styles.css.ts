@@ -14,10 +14,10 @@ export const badge = recipe({
   },
   variants: {
     type: {
-      blue: {
+      blueStrong: {
         backgroundColor: theme.colors.blue500,
       },
-      skyblue: {
+      blue: {
         backgroundColor: theme.colors.blue100,
       },
       red: {
@@ -43,7 +43,7 @@ export const badge = recipe({
     },
   },
   defaultVariants: {
-    type: 'skyblue',
+    type: 'blue',
     isDisabled: false,
   },
 })
@@ -55,10 +55,10 @@ export const label = recipe({
   },
   variants: {
     type: {
-      blue: {
+      blueStrong: {
         color: theme.colors.white,
       },
-      skyblue: {
+      blue: {
         color: theme.colors.blue500,
       },
       red: {

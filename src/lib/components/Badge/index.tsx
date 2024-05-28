@@ -1,7 +1,7 @@
 import { badge, label } from '@/lib/components/Badge/styles.css.ts'
 import { BadgeProps } from './Badge.interface'
 
-export const Badge = ({ text, type = 'skyblue', isDisabled, rounded = 4 }: BadgeProps) => {
+export const Badge = ({ text, type = 'blue', isDisabled, rounded = 4 }: BadgeProps) => {
   return (
     <div
       className={badge({

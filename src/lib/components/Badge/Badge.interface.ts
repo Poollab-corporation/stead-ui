@@ -1,4 +1,4 @@
-type BadgeType = 'blue' | 'skyblue' | 'red' | 'gray' | 'orange' | 'green'
+type BadgeType = 'blueStrong' | 'blue' | 'red' | 'gray' | 'orange' | 'green'
 
 export interface BadgeProps {
   readonly text: string
