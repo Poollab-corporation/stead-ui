@@ -5,7 +5,7 @@ export const shadow = recipe({
   base: {
     display: 'inline-block',
     backgroundColor: theme.colors.white,
-    border: '1px solid ${theme.colors.elevation100}',
+    border: `1px solid ${theme.colors.evaluation100}`,
     borderRadius: '4px',
   },
   variants: {
