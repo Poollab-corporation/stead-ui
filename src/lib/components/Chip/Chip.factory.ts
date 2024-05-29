@@ -8,16 +8,16 @@ export const getChipIconColor = (status: ChipStatus) => {
       color = 'blue700'
       break
     case 'success':
-      color = 'badgeGreen'
+      color = 'green700'
       break
     case 'danger':
       color = 'red800'
       break
     case 'warning':
-      color = 'systemOrange500'
+      color = 'orange700'
       break
     default:
-      color = 'neutralGray800'
+      color = 'neutralGray700'
       break
   }
 

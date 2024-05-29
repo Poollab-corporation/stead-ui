@@ -1,13 +1,7 @@
-import { badge } from '@/lib/components/Badge/styles.css.ts'
+import { badge, label } from '@/lib/components/Badge/styles.css.ts'
+import { BadgeProps } from './Badge.interface'
 
-interface BadgeProps {
-  readonly text: string
-  readonly type?: 'standard' | 'primary' | 'warning' | 'gray' | 'proceeding'
-  readonly isDisabled?: boolean
-  readonly rounded?: number
-}
-
-export const Badge = ({ text, type = 'standard', isDisabled, rounded = 4 }: BadgeProps) => {
+export const Badge = ({ text, type = 'blue', isDisabled, rounded = 4 }: BadgeProps) => {
   return (
     <div
       className={badge({
@@ -16,7 +10,7 @@ export const Badge = ({ text, type = 'standard', isDisabled, rounded = 4 }: Badg
       })}
       style={{ borderRadius: `${rounded}px` }}
     >
-      {text}
+      <span className={label({ type })}>{text}</span>
     </div>
   )
 }
