@@ -27,20 +27,6 @@ export const label = style({
   cursor: 'pointer',
 })
 
-export const text = style({
-  marginBottom: '-2px',
-  ...theme.fonts[14],
-  fontWeight: theme.fontWeights.medium,
-  color: theme.colors.neutralGray800,
-})
-
-export const mark = style({
-  marginBottom: '-8px',
-  ...theme.fonts[14],
-  fontWeight: theme.fontWeights.medium,
-  color: theme.colors.red500,
-})
-
 export const radio = recipe({
   base: {
     selectors: {

@@ -1,8 +1,8 @@
 'use client'
 
-import { Icon } from '../Icon'
+import { Label } from '../Label'
 import { RadioProps } from './Radio.interface'
-import { input, inputWrapper, label, mark, radio, text, wrapper } from './styles.css'
+import { input, inputWrapper, label, radio, wrapper } from './styles.css'
 
 export const Radio = ({
   state = 'primary',
@@ -28,7 +28,7 @@ export const Radio = ({
               disabled,
             })}
           />
-          {labelText && <span className={text}>{labelText}</span>}
+          {labelText && <Label label={labelText} isRequired={isRequired} hasInfo={hasInfo} />}
           <input
             className={input}
             type="radio"
@@ -37,8 +37,6 @@ export const Radio = ({
             value={value}
             onChange={onChange}
           />
-          {isRequired && <span className={mark}>*</span>}
-          {hasInfo && <Icon icon="icon/info-line" />}
         </label>
       </div>
     </div>
