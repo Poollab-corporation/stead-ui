@@ -1,15 +1,14 @@
+import { theme } from '@/globalTheme.css.ts'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
-import { theme } from '@/globalTheme.css.ts'
+
 export const switchInput = style({
-  display:'none'
+  display: 'none',
 })
 
-
-
 export const switchLabel = recipe({
-  base : {
-    position:'relative',
+  base: {
+    position: 'relative',
     display: 'flex',
     flexShrink: 0,
     alignItems: 'center',
@@ -17,48 +16,48 @@ export const switchLabel = recipe({
     padding: '4px 0',
     transition: 'background-color 400ms ease-in-out',
   },
-  variants : {
-    size : {
-      xs : {
-        width : '32px',
-        height : '16px',
+  variants: {
+    size: {
+      xs: {
+        width: '32px',
+        height: '16px',
       },
-      sm : {
-        width : '48px',
-        height : '24px'
+      sm: {
+        width: '48px',
+        height: '24px',
       },
-      md : {
+      md: {
         width: '64px',
         height: '32px',
       },
-      lg : {
+      lg: {
         width: '80px',
         height: '40px',
-      }
-    },
-    isChecked : {
-      true : {
-        background: theme.colors.blue500
       },
-      false : {
-        background: theme.colors.neutralGray200
-      }
     },
-    isDisabled : {
-      true : {
-        opacity : 0.5,
-        cursor : 'not-allowed'
+    isChecked: {
+      true: {
+        background: theme.colors.blue500,
       },
-      false : {
-        opacity : 1,
-        cursor : 'pointer'
-      }
-    }
-  }
+      false: {
+        background: theme.colors.neutralGray200,
+      },
+    },
+    isDisabled: {
+      true: {
+        opacity: 0.5,
+        cursor: 'not-allowed',
+      },
+      false: {
+        opacity: 1,
+        cursor: 'pointer',
+      },
+    },
+  },
 })
 
 export const switchToggle = recipe({
-  base : {
+  base: {
     position: 'absolute',
     top: '50%',
     background: theme.colors.white,
@@ -66,28 +65,28 @@ export const switchToggle = recipe({
     borderRadius: '50%',
     transition: 'left 400ms ease-in-out',
   },
-  variants : {
-    size : {
-      xs : {
-        width : '10px',
-        height : '10px',
+  variants: {
+    size: {
+      xs: {
+        width: '10px',
+        height: '10px',
       },
-      sm : {
-        width : '16px',
-        height : '16px',
+      sm: {
+        width: '16px',
+        height: '16px',
       },
-      md : {
+      md: {
         width: '24px',
         height: '24px',
       },
-      lg : {
+      lg: {
         width: '32px',
         height: '32px',
-      }
+      },
     },
-    isDisabled : {
-      true : { boxShadow: 'none' },
-      false : { boxShadow : '0px 4px 16px 0px rgba(126, 148, 189, 0.40)' }
-    }
-  }
+    isDisabled: {
+      true: { boxShadow: 'none' },
+      false: { boxShadow: '0px 4px 16px 0px rgba(126, 148, 189, 0.40)' },
+    },
+  },
 })
