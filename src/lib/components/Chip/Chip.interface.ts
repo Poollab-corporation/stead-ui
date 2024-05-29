@@ -9,6 +9,7 @@ export type colorType = keyof typeof COLORS
 export interface ChipProps {
   readonly status?: ChipStatus
   readonly size?: ChipSize
-  readonly icon?: IconNames
+  readonly leadingIcon?: IconNames
+  readonly trailingIcon?: IconNames
   readonly label: string
 }

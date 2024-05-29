@@ -34,7 +34,7 @@ interface Args {
   size?: sizeType
 }
 
-export const Default: Story = ({ size = 'md' }: Args) => (
+export const Default: Story = ({ size }: Args) => (
   <div style={{ padding: '30px', height: '240px' }}>
     <NavigationTabs size={size} buttons={Default.args.buttons} contents={Default.args.contents} />
   </div>

@@ -8,8 +8,8 @@ export const TOAST_ICONS = {
 
 export const TOAST_ICONS_COLORS = {
   info: 'blue500',
-  success: 'systemGreen500',
+  success: 'green400',
   error: 'red500',
-  warning: 'systemOrange500',
+  warning: 'orange500',
   pending: 'neutralGray500',
 }

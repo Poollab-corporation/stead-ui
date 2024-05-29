@@ -1,9 +1,15 @@
-import { labelStyle, wrapper } from '@/lib/components/Chip/styles.css.ts'
 import { Icon } from '../Icon'
 import { getChipIconColor } from './Chip.factory'
 import { ChipProps } from './Chip.interface'
+import { labelStyle, wrapper } from './styles.css'
 
-export const Chip = ({ status = 'default', size = 'md', label, icon }: ChipProps) => {
+export const Chip = ({
+  status = 'default',
+  size = 'md',
+  label,
+  leadingIcon,
+  trailingIcon,
+}: ChipProps) => {
   const iconColor = getChipIconColor(status)
 
   return (
@@ -13,8 +19,9 @@ export const Chip = ({ status = 'default', size = 'md', label, icon }: ChipProps
         size,
       })}
     >
-      {icon && <Icon icon={icon} color={iconColor} />}
+      {leadingIcon && <Icon icon={leadingIcon} color={iconColor} />}
       <span className={labelStyle({ status, size })}>{label}</span>
+      {trailingIcon && <Icon icon={trailingIcon} color={iconColor} />}
     </div>
   )
 }

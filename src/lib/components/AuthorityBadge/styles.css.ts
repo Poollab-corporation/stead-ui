@@ -18,8 +18,8 @@ export const wrapper = recipe({
         backgroundColor: theme.colors.blue100,
       },
       recruitmentMember: {
-        color: theme.colors.systemGreen500,
-        backgroundColor: theme.colors.systemGreen100,
+        color: theme.colors.green500,
+        backgroundColor: theme.colors.green100,
       },
       adminMember: {
         color: theme.colors.red500,
