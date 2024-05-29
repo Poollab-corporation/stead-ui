@@ -81,29 +81,6 @@ const green = {
   green900: '#05402E',
 }
 
-const system = {
-  systemRed100: '#FFF1F0',
-  systemRed500: '#FF7067',
-  systemOrange100: '#FFF6EF',
-  systemOrange500: '#FCA95D',
-  systemYellow100: '#FFF8E7',
-  systemYellow500: '#FFD362',
-  systemGreen100: '#EDFAF3',
-  systemGreen500: '#50CD89',
-  systemTurquoise100: '#EBFAF7',
-  systemTurquoise500: '#72DBC8',
-  badgeGreen: '#45B678',
-  badgeGreenBackground: '#DEF6EA',
-  systemBlue100: '#EFF5FF',
-  systemBlue500: '#629FFF',
-  systemNavy100: '#EFF1FF',
-  systemNavy500: '#6272FF',
-  systemPurple100: '#F2F1FD',
-  systemPurple500: '#7977E7',
-  systemPink100: '#FFF1FB',
-  systemPink500: '#FF8DDF',
-}
-
 export const COLORS = {
   ...monotone,
   ...evaluation,
@@ -112,5 +89,4 @@ export const COLORS = {
   ...blue,
   ...orange,
   ...green,
-  ...system,
 }
