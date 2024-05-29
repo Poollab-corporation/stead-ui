@@ -10,7 +10,7 @@ export interface WarningProps {
 export const Warning = ({ title, description, subDescription }: WarningProps) => {
   return (
     <div className={content}>
-      <Icon icon="icon/warning-solid" color="systemOrange500" size={64} />
+      <Icon icon="icon/warning-solid" color="orange500" size={64} />
       <div className={contentTitle}>{title}</div>
       <div className={contentDescription}>
         {description}
