@@ -1,65 +1,43 @@
 'use client'
-import { input, inputWrapper, label, radio, wrapper } from '@/lib/components/Radio/styles.css.ts'
 
-interface RadioProps {
-  checked?: boolean
-  state?: 'positive' | 'negative' | 'default'
-  size?: 'sm' | 'md'
-  isLeft?: boolean
-  name: string
-  labelText?: string
-  onChange: () => void
-  value?: string
-}
+import { Label } from '../Label'
+import { RadioProps } from './Radio.interface'
+import { input, inputWrapper, label, radio, wrapper } from './styles.css'
 
 export const Radio = ({
+  state = 'primary',
+  size = 'md',
   checked,
   name,
   labelText,
-  onChange,
-  isLeft = false,
-  state = 'default',
-  size = 'sm',
   value,
+  onChange,
+  isRequired = false,
+  hasInfo = false,
+  disabled = false,
 }: RadioProps) => {
   return (
     <div className={wrapper}>
       <div className={inputWrapper}>
-        {!labelText && (
-          <label className={label}>
-            <div className={radio({
+        <label className={label}>
+          <div
+            className={radio({
               size,
               state,
-              checked
-            })}/>
-            <input className={input}
-              name={name}
-              checked={checked}
-              onChange={onChange}
-              type="radio"
-              value={value}
-            />
-          </label>
-        )}
-
-        {labelText && (
-          <label className={label}>
-            {!isLeft && labelText}
-            <div className={radio({
-              size,
-              state,
-              checked
-            })}/>
-            {isLeft && labelText}
-            <input className={input}
-               name={name}
-               checked={checked}
-               onChange={onChange}
-               type="radio"
-               value={value}
-            />
-          </label>
-        )}
+              checked,
+              disabled,
+            })}
+          />
+          {labelText && <Label label={labelText} isRequired={isRequired} hasInfo={hasInfo} />}
+          <input
+            className={input}
+            type="radio"
+            name={name}
+            checked={checked}
+            value={value}
+            onChange={onChange}
+          />
+        </label>
       </div>
     </div>
   )

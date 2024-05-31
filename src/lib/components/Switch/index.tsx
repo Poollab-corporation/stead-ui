@@ -2,7 +2,8 @@
 
 import { ChangeEvent } from 'react'
 import { SwitchProps } from './Switch.interface'
-import { switchInput, switchLabel, switchToggle } from '@/lib/components/Switch/styles.css.ts'
+import { switchInput, switchLabel, switchToggle } from './styles.css'
+
 export const Switch = ({
   name,
   size = 'md',
@@ -22,26 +23,29 @@ export const Switch = ({
   }
 
   return (
-    <label className={switchLabel({
-      size,
-      isChecked,
-      isDisabled,
-    })}>
+    <label
+      className={switchLabel({
+        size,
+        isChecked,
+        isDisabled,
+      })}
+    >
       <input
-        role='switch'
-        type='checkbox'
+        role="switch"
+        type="checkbox"
         name={name}
         className={switchInput}
         disabled={isDisabled}
         defaultChecked={isChecked}
         onChange={handleInputChange}
       />
-      <div className={switchToggle({
+      <div
+        className={switchToggle({
           size,
-          isDisabled
+          isDisabled,
         })}
         style={{
-          left: isChecked ? '10%' : `calc(78% - ${switchToggleEnd[size] / 2}px)`,
+          right: isChecked ? '10%' : `calc(78% - ${switchToggleEnd[size] / 2}px)`,
         }}
       />
     </label>

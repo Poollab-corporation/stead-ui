@@ -5,15 +5,15 @@ const monotone = {
   background200: '#F5F5F5',
 }
 
-const evaluation = {
-  evaluation50: '#FDFDFD',
-  evaluation100: '#F7F7F7',
-  evaluation200: '#F4F4F4',
-  evaluation300: '#EEEEEE',
-  evaluation400: '#EBEBEB',
-  evaluation500: '#E6E6E6',
-  evaluation600: '#D1D1D1',
-  evaluation700: '#A3A3A3',
+const elevation = {
+  elevation50: '#FDFDFD',
+  elevation100: '#F7F7F7',
+  elevation200: '#F4F4F4',
+  elevation300: '#EEEEEE',
+  elevation400: '#EBEBEB',
+  elevation500: '#E6E6E6',
+  elevation600: '#D1D1D1',
+  elevation700: '#A3A3A3',
 }
 
 const neutralGray = {
@@ -83,7 +83,7 @@ const green = {
 
 export const COLORS = {
   ...monotone,
-  ...evaluation,
+  ...elevation,
   ...neutralGray,
   ...red,
   ...blue,

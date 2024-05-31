@@ -14,13 +14,13 @@ export const Label = ({
   size = 'md',
   isRequired = false,
   hasInfo = false,
-  isActive = false,
+  isActive = true,
 }: LabelProps) => {
   return (
     <div className={wrapper({ size })}>
       <span className={text({ size, isActive })}>{label}</span>
       {isRequired && <span className={required({ size })}>*</span>}
-      {hasInfo && <Icon icon="icon/info-line" />}
+      {hasInfo && <Icon icon="icon/info-line" color="neutralGray800" />}
     </div>
   )
 }
