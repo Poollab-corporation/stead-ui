@@ -2,9 +2,7 @@ import { ChangeEvent } from 'react'
 
 import { CheckBoxProps } from '@/lib/components/CheckBox/CheckBox.interface.ts'
 import { Icon } from '@/lib'
-import {
-  CHECKBOX_IMAGE_SIZE,
-} from '@/lib/components/CheckBox/CheckBox.constants.ts'
+import { CHECKBOX_IMAGE_SIZE } from '@/lib/components/CheckBox/CheckBox.constants.ts'
 import {
   container,
   inner,
@@ -29,22 +27,26 @@ export const CheckBox = ({
 
   return (
     <div className={wrapper}>
-      <label className={label({
-        size,
-        disabled,
-        isChecked
-      })}
-      style={{
-
-      }}>
-        <div className={container({
+      <label
+        className={label({
           size,
-          isChecked
-        })}>
-          <div className={inner({
+          disabled,
+          isChecked,
+        })}
+        style={{}}
+      >
+        <div
+          className={container({
             size,
-            isChecked
-          })}>
+            isChecked,
+          })}
+        >
+          <div
+            className={inner({
+              size,
+              isChecked,
+            })}
+          >
             <input
               type="checkbox"
               name={name}
@@ -53,7 +55,7 @@ export const CheckBox = ({
               defaultChecked={isChecked}
               onChange={handleInputChange}
             />
-            {isChecked && <Icon icon="icon/check-line" color="white" size={imageSize} />}
+            {isChecked && <Icon icon="icon/check-line1" color="white" size={imageSize} />}
           </div>
         </div>
       </label>
