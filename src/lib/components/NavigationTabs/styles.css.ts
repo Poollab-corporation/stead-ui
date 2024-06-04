@@ -22,6 +22,7 @@ export const tabsWrapper = recipe({
 export const tabButtonListStyle = style({
   display: 'flex',
   width: '100%',
+  marginBottom: '20px',
 })
 
 export const tabButtonStyle = recipe({
@@ -29,7 +30,6 @@ export const tabButtonStyle = recipe({
     display: 'inline-flex',
     justifyContent: 'center',
     alignItems: 'center',
-    width: '100%',
     height: '100%',
     cursor: 'pointer',
 
@@ -54,7 +54,7 @@ export const tabButtonStyle = recipe({
         color: theme.colors.neutralGray800,
       },
       false: {
-        border: 'none',
+        borderBottom: `1px solid ${theme.colors.elevation300}`,
       },
     },
   },
