@@ -47,7 +47,7 @@ export const Default: Story = {
   args: {
     status: 'default',
     size: 'md',
-    leadingIcon: 'icon/check-line',
+    leadingIcon: 'icon/check-line1',
     trailingIcon: 'icon/info-line',
     label: 'Status chip',
   },

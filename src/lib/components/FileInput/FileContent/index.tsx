@@ -9,7 +9,7 @@ interface FileContentProps {
 export const FileContent = ({ file, onClick }: FileContentProps) => {
   if (!file) return null
   return (
-    <div className={wrapper} >
+    <div className={wrapper}>
       <Icon icon="icon/document-solid" color="blue500" />
       <span className={fileName}>{file?.name}</span>
       {onClick && (
@@ -18,7 +18,7 @@ export const FileContent = ({ file, onClick }: FileContentProps) => {
           size="xs"
           state="primary"
           style="mono"
-          leadingIcon="icon/cancle-line"
+          leadingIcon="icon/cancle-line1"
         />
       )}
     </div>
