@@ -18,7 +18,7 @@ export const NavigationTabs = ({ size = 'md', buttons, contents }: NavigationTab
   }
 
   return (
-    <NavigationTabsWrapper size={size}>
+    <NavigationTabsWrapper>
       <TabButtonList
         size={size}
         buttons={buttons}

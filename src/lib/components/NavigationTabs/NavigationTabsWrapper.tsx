@@ -5,6 +5,6 @@ interface NavigationTabsWrapperProps {
   children: React.ReactNode
 }
 
-export const NavigationTabsWrapper = ({ size = 'md', children }: NavigationTabsWrapperProps) => {
-  return <div className={tabsWrapper({ size })}>{children}</div>
+export const NavigationTabsWrapper = ({ children }: NavigationTabsWrapperProps) => {
+  return <div className={tabsWrapper}>{children}</div>
 }

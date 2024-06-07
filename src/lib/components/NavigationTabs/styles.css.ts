@@ -2,31 +2,21 @@ import { theme } from '@/globalTheme.css'
 import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
-export const tabsWrapper = recipe({
-  base: {
-    width: '100%',
-    height: 'auto',
-  },
-  variants: {
-    size: {
-      md: {
-        height: '40px',
-      },
-      lg: {
-        height: '48px',
-      },
-    },
-  },
+export const tabsWrapper = style({
+  width: '100%',
+  height: 'auto',
 })
 
 export const tabButtonListStyle = style({
   display: 'flex',
   width: '100%',
   marginBottom: '20px',
+  borderBottom: `1px solid ${theme.colors.elevation300}`,
 })
 
 export const tabButtonStyle = recipe({
   base: {
+    position: 'relative',
     display: 'inline-flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -50,11 +40,19 @@ export const tabButtonStyle = recipe({
     },
     isActive: {
       true: {
-        borderBottom: `1.5px solid ${theme.colors.blue500}`,
-        color: theme.colors.neutralGray800,
-      },
-      false: {
-        borderBottom: `1px solid ${theme.colors.elevation300}`,
+        '::after': {
+          content: '',
+          position: 'absolute',
+          bottom: '-1px',
+          left: '0',
+          width: '100%',
+          backgroundColor: theme.colors.blue500,
+          borderBottom: `2px solid ${theme.colors.blue500}`,
+          color: theme.colors.neutralGray800,
+        },
+        false: {
+          borderBottom: 'none',
+        },
       },
     },
   },
