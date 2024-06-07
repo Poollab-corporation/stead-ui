@@ -45,11 +45,9 @@ export const labelStyle = recipe({
   variants: {
     size: {
       sm: {
-        marginBottom: '-1px',
         ...theme.fonts[10],
       },
       md: {
-        marginBottom: '-2px',
         ...theme.fonts[11],
       },
     },
