@@ -1,24 +1,24 @@
-import { Icon } from '@/lib'
-import { CHECKBOX_IMAGE_SIZE } from '@/lib/components/CheckBox/CheckBox.constants.ts'
-import { CheckBoxProps } from '@/lib/components/CheckBox/CheckBox.interface.ts'
-import {
-  container,
-  inner,
-  input,
-  label,
-  textWrapper,
-  wrapper,
-} from '@/lib/components/CheckBox/styles.css.ts'
+'use client'
+
+import { Icon, Label } from '@/lib'
 import { ChangeEvent } from 'react'
+import { CHECKBOX_IMAGE_SIZE } from './CheckBox.constants'
+import { CheckBoxProps } from './CheckBox.interface'
+import { container, inner, input, label, textWrapper, wrapper } from './styles.css'
 
 export const CheckBox = ({
-  name,
-  disabled = false,
   isChecked,
-  onChange,
-  size = 'md',
+  isPartial = false,
+  name,
   text,
+  size = 'md',
+  type = 'primary',
+  isRequired = false,
+  hasInfo = false,
+  disabled = false,
+  onChange,
 }: CheckBoxProps) => {
+  const isActive = isChecked || isPartial
   const imageSize = CHECKBOX_IMAGE_SIZE[size]
 
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
@@ -31,21 +31,22 @@ export const CheckBox = ({
       <label
         className={label({
           size,
+          type,
           disabled,
-          isChecked,
+          isActive,
         })}
-        style={{}}
       >
         <div
           className={container({
             size,
-            isChecked,
+            isActive,
           })}
         >
           <div
             className={inner({
               size,
-              isChecked,
+              type,
+              isActive,
             })}
           >
             <input
@@ -57,10 +58,15 @@ export const CheckBox = ({
               onChange={handleInputChange}
             />
             {isChecked && <Icon icon="icon/check-line1" color="white" size={imageSize} />}
+            {isPartial && <Icon icon="icon/minus-line" color="white" size={imageSize} />}
           </div>
         </div>
       </label>
-      {text && <p className={textWrapper}>{text}</p>}
+      {text && (
+        <p className={textWrapper}>
+          <Label label={text} isRequired={isRequired} hasInfo={hasInfo} />
+        </p>
+      )}
     </div>
   )
 }

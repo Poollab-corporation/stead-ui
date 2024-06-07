@@ -1,5 +1,5 @@
-import { style } from '@vanilla-extract/css'
 import { theme } from '@/globalTheme.css.ts'
+import { style } from '@vanilla-extract/css'
 import { recipe } from '@vanilla-extract/recipes'
 
 export const baseStyle = {
@@ -11,115 +11,154 @@ export const baseStyle = {
 
 export const wrapper = style({
   display: 'flex',
-  alignItems: 'center'
+  alignItems: 'center',
 })
 
 export const label = recipe({
-  base : {
-    ...baseStyle
+  base: {
+    ...baseStyle,
   },
-  variants : {
-    size : {
-      sm : {
-        width : '16px',
-        height : '16px'
+  variants: {
+    size: {
+      md: {
+        width: '16px',
+        height: '16px',
+        padding: '1px',
       },
-      md : {
-        width : '20px',
-        height: '20px'
-      }
-    },
-    disabled : {
-      true : {
-        cursor : 'not-allowed',
-        opacity : 0.3
-      },
-      false : {
-        cursor : 'pointer',
-        opacity : 1,
+      lg: {
+        width: '20px',
+        height: '20px',
+        padding: '2px',
       },
     },
-    isChecked : {
-      true : {},
-      false: {}
-    }
+    type: {
+      primary: {
+        ':hover': {
+          background: theme.colors.blue100,
+        },
+      },
+      secondary: {
+        ':hover': {
+          background: theme.colors.neutralGray100,
+        },
+      },
+    },
+    disabled: {
+      true: {
+        pointerEvents: 'none',
+        cursor: 'not-allowed',
+        opacity: 0.5,
+      },
+      false: {
+        cursor: 'pointer',
+        opacity: 1,
+      },
+    },
+    isActive: {
+      true: {},
+      false: {},
+    },
   },
-  defaultVariants : {
-    size : 'md',
-    disabled : false,
-    isChecked : false
-  }
+  defaultVariants: {
+    size: 'md',
+    disabled: false,
+    isActive: false,
+  },
 })
 
 export const container = recipe({
   base: {
     ...baseStyle,
   },
-  variants : {
+  variants: {
     size: {
-      sm: {
-        width: '12px',
-        height: '12px'
-      },
       md: {
-        width: '16px',
-        height: '16px'
-      }
-    },
-    isChecked: {
-      true: {
-
+        width: '14px',
+        height: '14px',
       },
+      lg: {
+        width: '16px',
+        height: '16px',
+      },
+    },
+    isActive: {
+      true: {},
       false: {
-        border: 'none'
-      }
-    }
+        border: 'none',
+      },
+    },
   },
-  defaultVariants : {
-    size : 'md',
-    isChecked : false
-  }
+  defaultVariants: {
+    size: 'md',
+    isActive: false,
+  },
 })
 
 export const inner = recipe({
-  base : {
+  base: {
     ...baseStyle,
   },
-  variants : {
+  variants: {
     size: {
-      sm: {
-        width: '12px',
-        height: '12px'
-      },
       md: {
-        width: '16px',
-        height: '16px'
-      }
-    },
-    isChecked: {
-      true: {
-        background : theme.colors.blue500,
-        border : `1px solid ${theme.colors.blue500}`
+        width: '14px',
+        height: '14px',
       },
+      lg: {
+        width: '16px',
+        height: '16px',
+      },
+    },
+    isActive: {
+      true: {},
       false: {
-        background: 'none',
-        border : `1px solid ${theme.colors.blue500}`
-      }
-    }
+        backgroundColor: 'none',
+      },
+    },
+    type: {
+      primary: {},
+      secondary: {},
+    },
   },
-  defaultVariants : {
-    size : 'md',
-    isChecked : false
-  }
+  compoundVariants: [
+    {
+      variants: { isActive: true, type: 'primary' },
+      style: {
+        backgroundColor: theme.colors.blue500,
+        border: `1px solid ${theme.colors.blue500}`,
+      },
+    },
+    {
+      variants: { isActive: true, type: 'secondary' },
+      style: {
+        backgroundColor: theme.colors.neutralGray700,
+        border: `1px solid ${theme.colors.neutralGray700}`,
+      },
+    },
+    {
+      variants: { isActive: false, type: 'primary' },
+      style: {
+        border: `1px solid ${theme.colors.blue500}`,
+      },
+    },
+    {
+      variants: { isActive: false, type: 'secondary' },
+      style: {
+        border: `1px solid ${theme.colors.neutralGray700}`,
+      },
+    },
+  ],
+  defaultVariants: {
+    size: 'md',
+    type: 'primary',
+    isActive: false,
+  },
 })
 
 export const input = style({
-  display : 'none'
+  display: 'none',
 })
 
 export const textWrapper = style({
-  marginLeft : '4px',
-  fontWeight : theme.fontWeights.medium,
-  color : theme.colors.neutralGray800,
-  ...theme.fonts['14']
+  marginLeft: '4px',
 })
