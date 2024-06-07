@@ -1,13 +1,13 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import { NavigationTabsWrapper } from './NavigationTabsWrapper'
 import { TabButtonList } from './TabButtonList'
 import { TabContentList } from './TabContentList'
-import { TabButtonType, TabContentType, sizeType } from './NavigationTabs.interface'
+import { TabButtonType, sizeType } from './NavigationTabs.interface'
 
 interface NavigationTabsProps {
   size?: sizeType
   buttons: TabButtonType[]
-  contents: TabContentType[]
+  contents: React.ReactNode[]
 }
 
 export const NavigationTabs = ({ size = 'md', buttons, contents }: NavigationTabsProps) => {
