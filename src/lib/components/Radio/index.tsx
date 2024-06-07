@@ -16,6 +16,11 @@ export const Radio = ({
   hasInfo = false,
   disabled = false,
 }: RadioProps) => {
+  const handleChange = () => {
+    if (!onChange) return
+    onChange()
+  }
+
   return (
     <div className={wrapper}>
       <div className={inputWrapper}>
@@ -35,7 +40,7 @@ export const Radio = ({
             name={name}
             checked={checked}
             value={value}
-            onChange={onChange}
+            onChange={handleChange}
           />
         </label>
       </div>

@@ -1,8 +1,6 @@
-import { ChangeEvent } from 'react'
-
-import { CheckBoxProps } from '@/lib/components/CheckBox/CheckBox.interface.ts'
 import { Icon } from '@/lib'
 import { CHECKBOX_IMAGE_SIZE } from '@/lib/components/CheckBox/CheckBox.constants.ts'
+import { CheckBoxProps } from '@/lib/components/CheckBox/CheckBox.interface.ts'
 import {
   container,
   inner,
@@ -11,6 +9,7 @@ import {
   textWrapper,
   wrapper,
 } from '@/lib/components/CheckBox/styles.css.ts'
+import { ChangeEvent } from 'react'
 
 export const CheckBox = ({
   name,
@@ -21,7 +20,9 @@ export const CheckBox = ({
   text,
 }: CheckBoxProps) => {
   const imageSize = CHECKBOX_IMAGE_SIZE[size]
+
   const handleInputChange = (event: ChangeEvent<HTMLInputElement>) => {
+    if (!onChange) return
     onChange(event.target.checked)
   }
 

@@ -5,7 +5,7 @@ export interface RadioProps {
   name: string
   labelText?: string
   value?: string
-  onChange: () => void
+  onChange?: () => void
   isRequired?: boolean
   hasInfo?: boolean
   disabled?: boolean
