@@ -9,7 +9,3 @@ export interface TabButtonType {
   radio?: React.ReactNode
   label: string
 }
-
-export interface TabContentType {
-  content: React.ReactNode
-}

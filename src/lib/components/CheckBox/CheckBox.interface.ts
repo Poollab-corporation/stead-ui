@@ -1,8 +1,14 @@
+export type CheckBoxType = 'primary' | 'secondary'
+
 export interface CheckBoxProps {
+  isChecked?: boolean
+  isPartial?: boolean
   name?: string
-  disabled?: boolean
-  isChecked: boolean
-  onChange?: (checked: boolean) => void
-  size?: 'sm' | 'md'
   text?: string
+  size?: 'md' | 'lg'
+  type?: CheckBoxType
+  isRequired?: boolean
+  hasInfo?: boolean
+  disabled?: boolean
+  onChange?: (checked: boolean) => void
 }

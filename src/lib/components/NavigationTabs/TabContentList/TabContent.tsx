@@ -1,8 +1,9 @@
-import { TabContentType } from '../NavigationTabs.interface'
+import React from 'react'
 import { tabContentStyle } from '../styles.css'
 
-interface TabContentProps extends TabContentType {
+interface TabContentProps {
   isActive: boolean
+  content: React.ReactNode
 }
 
 export const TabContent = ({ content, isActive }: TabContentProps) => {

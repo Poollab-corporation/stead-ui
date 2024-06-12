@@ -57,42 +57,28 @@ Default.args = {
     },
   ],
   contents: [
-    {
-      content: (
-        <div
-          style={{ margin: '10px', padding: '10px', height: '100px', backgroundColor: 'lightblue' }}
-        >
-          첫 번째 컨텐츠
-        </div>
-      ),
-    },
-    {
-      content: (
-        <div
-          style={{
-            margin: '10px',
-            padding: '10px',
-            height: '100px',
-            backgroundColor: 'lightgreen',
-          }}
-        >
-          <div>두 번째 컨텐츠</div>
-        </div>
-      ),
-    },
-    {
-      content: (
-        <div
-          style={{
-            margin: '10px',
-            padding: '10px',
-            height: '100px',
-            backgroundColor: 'lightpink',
-          }}
-        >
-          <div>세 번째 컨텐츠</div>
-        </div>
-      ),
-    },
+    <div style={{ margin: '10px', padding: '10px', height: '100px', backgroundColor: 'lightblue' }}>
+      첫 번째 컨텐츠
+    </div>,
+    <div
+      style={{
+        margin: '10px',
+        padding: '10px',
+        height: '100px',
+        backgroundColor: 'lightgreen',
+      }}
+    >
+      <div>두 번째 컨텐츠</div>
+    </div>,
+    <div
+      style={{
+        margin: '10px',
+        padding: '10px',
+        height: '100px',
+        backgroundColor: 'lightpink',
+      }}
+    >
+      <div>세 번째 컨텐츠</div>
+    </div>,
   ],
 }
