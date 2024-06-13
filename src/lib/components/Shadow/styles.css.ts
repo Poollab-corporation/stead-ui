@@ -4,9 +4,9 @@ import { recipe } from '@vanilla-extract/recipes'
 export const shadow = recipe({
   base: {
     display: 'inline-block',
+    width: '100%',
     backgroundColor: theme.colors.white,
     border: `1px solid ${theme.colors.elevation100}`,
-    borderRadius: '4px',
   },
   variants: {
     type: {
