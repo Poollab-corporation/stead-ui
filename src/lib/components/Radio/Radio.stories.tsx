@@ -59,18 +59,20 @@ export const Default: Story = ({
   hasInfo,
   disabled,
 }: RadioProps) => (
-  <Radio
-    checked={checked}
-    name={name}
-    value={value}
-    onChange={onChange}
-    labelText={labelText}
-    isRequired={isRequired}
-    hasInfo={hasInfo}
-    state={state}
-    size={size}
-    disabled={disabled}
-  />
+  <>
+    <Radio
+      checked={checked}
+      name={name}
+      value={value}
+      onChange={onChange}
+      labelText={labelText}
+      isRequired={isRequired}
+      hasInfo={hasInfo}
+      state={state}
+      size={size}
+      disabled={disabled}
+    />
+  </>
 )
 
 Default.args = {
