@@ -1,7 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 import React from 'react'
 import { ToggleTabs } from '.'
-import { sizeType } from './ToggleTabs.interface'
 
 const meta = {
   title: 'Component/ToggleTabs',
@@ -19,25 +18,26 @@ const meta = {
       },
     },
     buttons: {
+      control: 'object',
       description: '탭 버튼 목록',
     },
     contents: {
+      control: 'object',
       description: '탭 컨텐츠 목록',
     },
-    // TODO: icon, text, disabled 옵션 추가
   },
 } satisfies Meta<typeof ToggleTabs>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-interface Args {
-  size?: sizeType
-}
-
-export const Default: Story = ({ size }: Args) => (
+export const Default: Story = () => (
   <div style={{ padding: '30px', width: '600px', height: '240px' }}>
-    <ToggleTabs size={size} buttons={Default.args.buttons} contents={Default.args.contents} />
+    <ToggleTabs
+      size={Default.args.size}
+      buttons={Default.args.buttons}
+      contents={Default.args.contents}
+    />
   </div>
 )
 
@@ -47,14 +47,17 @@ Default.args = {
     {
       text: '첫 번째 버튼',
       icon: 'icon/list-solid',
+      disabled: false,
     },
     {
       text: '두 번째 버튼',
       icon: 'icon/list-solid',
+      disabled: false,
     },
     {
       text: '세 번째 버튼',
       icon: 'icon/list-solid',
+      disabled: false,
     },
   ],
   contents: [
