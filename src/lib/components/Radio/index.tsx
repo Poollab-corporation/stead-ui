@@ -41,6 +41,7 @@ export const Radio = ({
             checked={checked}
             value={value}
             onChange={handleChange}
+            disabled={disabled}
           />
         </label>
       </div>
