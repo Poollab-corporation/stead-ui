@@ -9,7 +9,7 @@ interface TabContentListProps {
 
 export const TabContentList = ({ contents, selectedTab }: TabContentListProps) => {
   return (
-    <div className={tabContentListStyle}>
+    <ul className={tabContentListStyle}>
       {contents.map((content, index) => (
         <TabContent
           key={`tab_content_${index}`}
@@ -17,6 +17,6 @@ export const TabContentList = ({ contents, selectedTab }: TabContentListProps) =
           content={content}
         />
       ))}
-    </div>
+    </ul>
   )
 }

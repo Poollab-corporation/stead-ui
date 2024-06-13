@@ -9,5 +9,5 @@ interface TabContentProps {
 export const TabContent = ({ content, isActive }: TabContentProps) => {
   if (!isActive) return null
 
-  return <div className={tabContentStyle}>{content}</div>
+  return <li className={tabContentStyle}>{content}</li>
 }
