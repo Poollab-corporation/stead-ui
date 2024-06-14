@@ -1,12 +1,11 @@
-import React from 'react'
 import { tabContentStyle } from '../styles.css'
 
-interface TabContentProps {
-  isActive: boolean
+interface ToggleContentProps {
   content: React.ReactNode
+  isActive: boolean
 }
 
-export const TabContent = ({ content, isActive }: TabContentProps) => {
+export const ToggleContent = ({ content, isActive }: ToggleContentProps) => {
   if (!isActive) return null
 
   return <li className={tabContentStyle}>{content}</li>

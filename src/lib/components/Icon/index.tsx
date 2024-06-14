@@ -20,8 +20,11 @@ export const Icon = ({
   onClick,
   color = 'black',
 }: IconProps): ReactElement => {
-  const path = `${icons[icon].svg}`
+  const path = icons[icon]?.svg && `${icons[icon].svg}`
   const fill = COLORS[color]
+
+  if (!path) return <></>
+
   return (
     <svg width={size} height={size} viewBox="0 0 16 16" style={style} onClick={onClick}>
       <path d={path} fill={fill} transform="translate(-0.5, 0.5)"></path>
