@@ -24,7 +24,6 @@ export const ToggleSwitchList = ({
             key={`toggle_switch_${index}`}
             index={index}
             size={size}
-            selectedTab={selectedTab}
             isActive={selectedTab === index}
             onClick={onClick}
             {...button}

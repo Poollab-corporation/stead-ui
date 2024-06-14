@@ -5,7 +5,6 @@ import { labelStyle, tabButtonStyle } from '../styles.css'
 interface ToggleSwitchProps extends ToggleSwitchType {
   index: number
   size: sizeType
-  selectedTab: number
   isActive: boolean
   onClick: (index: number) => void
 }
@@ -15,9 +14,8 @@ export const ToggleSwitch = ({
   size,
   text,
   icon,
-  selectedTab,
   isActive,
-  disabled,
+  disabled = false,
   onClick,
 }: ToggleSwitchProps) => {
   const tabIndex = disabled ? -1 : 0
