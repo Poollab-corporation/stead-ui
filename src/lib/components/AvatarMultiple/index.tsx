@@ -1,4 +1,4 @@
-import { Avatar } from '../Avatar'
+import { Avatar } from '@/lib'
 import { AvatarMultipleProps } from './AvatarMultiple.interface'
 import { UnknownAvatar } from './UnknownAvatar'
 import { item, lengthStyle, list, wrapper } from './styles.css'
