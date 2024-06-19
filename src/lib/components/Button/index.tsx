@@ -77,11 +77,12 @@ export const Button = ({
         style={{ width : `${width}px` }}
         href={href}
         target={isNewTab ? '_blank' : '_self'}
+        data-testid={testId}
       >
         {leadingIcon && <Icon icon={leadingIcon} color={getLeadingIconColor()} />}
         {text && <span>{text}</span>}
         {trailingIcon && <Icon icon={trailingIcon} color={getTrailingIconColor()} />}
-        data-testid={testId}
+
       </a>
     )
   }
