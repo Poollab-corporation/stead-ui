@@ -22,6 +22,7 @@ export interface ButtonProps {
   onClick?: () => void
   onMouseEnter?: () => void
   onMouseLeave?: () => void
+  testId?: string
 }
 
 export interface StyleProps {

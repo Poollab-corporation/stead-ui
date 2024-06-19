@@ -23,6 +23,7 @@ export const Button = ({
   onClick,
   onMouseEnter,
   onMouseLeave,
+  testId,
 }: ButtonProps) => {
   const iconColor = getIconColor(state, style, disabled) as colorType
   const getLeadingIconColor = () => {
@@ -80,6 +81,7 @@ export const Button = ({
         {leadingIcon && <Icon icon={leadingIcon} color={getLeadingIconColor()} />}
         {text && <span>{text}</span>}
         {trailingIcon && <Icon icon={trailingIcon} color={getTrailingIconColor()} />}
+        data-testid={testId}
       </a>
     )
   }
@@ -96,6 +98,7 @@ export const Button = ({
       onClick={handleClick}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      data-testid={testId}
     >
       {leadingIcon && <Icon icon={leadingIcon} color={getLeadingIconColor()} />}
       {text && <span>{text}</span>}
