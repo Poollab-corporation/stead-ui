@@ -27,12 +27,12 @@ export const Button = ({
 }: ButtonProps) => {
   const iconColor = getIconColor(state, style, disabled) as colorType
   const getLeadingIconColor = () => {
-    if(!leadingIconColor) return iconColor
+    if (!leadingIconColor) return iconColor
     return leadingIconColor as colorType
   }
 
   const getTrailingIconColor = () => {
-    if(!trailingIconColor) return iconColor
+    if (!trailingIconColor) return iconColor
     return trailingIconColor as colorType
   }
 
@@ -53,28 +53,28 @@ export const Button = ({
 
   if (isLoading && !disabled) {
     return (
-      <button
-        type={!href ? type : undefined}
-        disabled={disabled}
-      >
-        <div className={buttonLoading({
-          size,
-          state,
-          style
-        })} data-testid="loading-spinner" />
+      <button type={!href ? type : undefined} disabled={disabled}>
+        <div
+          className={buttonLoading({
+            size,
+            state,
+            style,
+          })}
+          data-testid="loading-spinner"
+        />
       </button>
     )
   }
 
-  if(href) {
+  if (href) {
     return (
       <a
         className={wrapper({
           size,
           state,
-          style
+          style,
         })}
-        style={{ width : `${width}px` }}
+        style={{ width: width && `${width}px` }}
         href={href}
         target={isNewTab ? '_blank' : '_self'}
         data-testid={testId}
@@ -82,18 +82,18 @@ export const Button = ({
         {leadingIcon && <Icon icon={leadingIcon} color={getLeadingIconColor()} />}
         {text && <span>{text}</span>}
         {trailingIcon && <Icon icon={trailingIcon} color={getTrailingIconColor()} />}
-
       </a>
     )
   }
 
   return (
-    <button className={wrapper({
+    <button
+      className={wrapper({
         size,
         state,
-        style
+        style,
       })}
-      style={{ width : `${width}px` }}
+      style={{ width: width && `${width}px` }}
       type={type}
       disabled={disabled}
       onClick={handleClick}
