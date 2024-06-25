@@ -14,6 +14,7 @@ export const switchLabel = recipe({
     alignItems: 'center',
     borderRadius: '32px',
     padding: '4px 0',
+    backgroundColor: theme.colors.neutralGray200,
     transition: 'background-color 400ms ease-in-out',
   },
   variants: {
@@ -37,10 +38,7 @@ export const switchLabel = recipe({
     },
     isChecked: {
       true: {
-        background: theme.colors.blue500,
-      },
-      false: {
-        background: theme.colors.neutralGray200,
+        backgroundColor: theme.colors.blue500,
       },
     },
     isDisabled: {

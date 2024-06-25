@@ -1,11 +1,8 @@
+import React from 'react'
 import './globalTheme.css'
 
 function App() {
-  return (
-    <div>
-      <h1>STEAD UI</h1>
-    </div>
-  )
+  return <div style={{ padding: '20px', background: 'white' }}>STEAD UI</div>
 }
 
 export default App

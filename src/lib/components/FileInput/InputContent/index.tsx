@@ -1,5 +1,5 @@
-import { inputStyle, placeholderStyle, wrapper } from '@/lib/components/FileInput/InputContent/styles.css.ts'
-import { Icon } from '@/lib'
+import { Button, Icon } from '@/lib'
+import { inputStyle, placeholderStyle, wrapper } from './styles.css'
 
 interface InputContentProps {
   file?: File
@@ -20,55 +20,46 @@ export const InputContent = ({
 }: InputContentProps) => {
   if (file) return null
 
-  if(register) {
+  if (register) {
     return (
-      <label className={wrapper}
+      <label
+        className={wrapper}
         style={{
-          pointerEvents : isReadOnly ? 'none' : 'auto',
+          pointerEvents: isReadOnly ? 'none' : 'auto',
         }}
       >
-        <input type="file" accept={accept} {...register} className={inputStyle}/>
+        <input type="file" accept={accept} {...register} className={inputStyle} />
         <span className={placeholderStyle}>{placeholder}</span>
-        <Icon
-          color="black"
-          icon="icon/upload-solid"
-          size={16}
-        />
+        <Icon color="black" icon="icon/upload-solid" size={16} />
       </label>
     )
   }
 
   if (onChange) {
     return (
-      <label className={wrapper}
+      <label
+        className={wrapper}
         style={{
-          pointerEvents : isReadOnly ? 'none' : 'auto',
+          pointerEvents: isReadOnly ? 'none' : 'auto',
         }}
       >
-        <input type="file" accept={accept} onChange={onChange}  className={inputStyle}/>
+        <input type="file" accept={accept} onChange={onChange} className={inputStyle} />
         <span className={placeholderStyle}>{placeholder}</span>
-        <Icon
-          color="black"
-          icon="icon/upload-solid"
-          size={16}
-        />
+        <Button leadingIcon="icon/upload-solid" state="secondary" style="fill-weak" size="sm" />
       </label>
     )
   }
 
   return (
-    <label className={wrapper}
-       style={{
-         pointerEvents : isReadOnly ? 'none' : 'auto',
-       }}
+    <label
+      className={wrapper}
+      style={{
+        pointerEvents: isReadOnly ? 'none' : 'auto',
+      }}
     >
-      <input type="file" accept={accept} className={inputStyle}/>
+      <input type="file" accept={accept} className={inputStyle} />
       <span className={placeholderStyle}>{placeholder}</span>
-      <Icon
-        color="black"
-        icon="icon/upload-solid"
-        size={16}
-      />
+      <Icon color="black" icon="icon/upload-solid" size={16} />
     </label>
   )
 }

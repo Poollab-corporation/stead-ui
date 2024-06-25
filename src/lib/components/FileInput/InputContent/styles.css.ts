@@ -2,11 +2,12 @@ import { style } from '@vanilla-extract/css'
 import { theme } from '@/globalTheme.css.ts'
 
 export const parent = style({})
+
 export const wrapper = style({
   display: 'flex',
   width: '100%',
   height: '40px',
-  padding: '0 4px 0 12px',
+  padding: '4px 4px 4px 12px',
   alignItems: 'center',
   justifyContent: 'space-between',
   borderRadius: '6px',
@@ -15,11 +16,11 @@ export const wrapper = style({
 })
 
 export const inputStyle = style({
-  display: 'none'
+  display: 'none',
 })
 
 export const placeholderStyle = style({
   color: theme.colors.neutralGray400,
   fontWeight: theme.fontWeights.medium,
-  ...theme.fonts[14]
+  ...theme.fonts[14],
 })
