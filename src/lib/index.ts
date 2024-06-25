@@ -1,6 +1,7 @@
 export { ArrowToggle } from './components/ArrowToggle'
 export { AuthorityBadge } from './components/AuthorityBadge'
 export { Avatar } from './components/Avatar'
+export { AvatarMultiple } from './components/AvatarMultiple'
 export { Badge } from './components/Badge'
 export { Button } from './components/Button'
 export { CheckBox } from './components/CheckBox'

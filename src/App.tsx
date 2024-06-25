@@ -1,5 +1,4 @@
 import './globalTheme.css'
-import React from 'react'
 
 function App() {
   return (
