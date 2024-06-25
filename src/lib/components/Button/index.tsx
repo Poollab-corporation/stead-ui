@@ -93,7 +93,7 @@ export const Button = ({
         state,
         style,
       })}
-      style={{ width: width && `${width}px` }}
+      style={{ width: width && `${width}` }}
       type={type}
       disabled={disabled}
       onClick={handleClick}
