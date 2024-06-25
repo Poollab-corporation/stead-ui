@@ -1,6 +1,7 @@
 import { Icon, IconNames } from '../Icon'
-import { ModalFooter } from '../ModalFooter'
+import { ModalFooter } from '@/lib'
 import { contents, iconWrapper, subtitleStyle, titleStyle, wrapper } from './styles.css'
+import React from 'react'
 
 interface ConfirmModalProps {
   title: string
