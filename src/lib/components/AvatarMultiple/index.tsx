@@ -9,13 +9,13 @@ export const AvatarMultiple = ({ members, size }: AvatarMultipleProps) => {
   const shouldRenderUnknownAvatars = length < 3
 
   const renderUnknownAvatars = () => {
-    const unknownAvatarList = []
-
-    for (let i = 0; i < 3 - length; i++) {
-      unknownAvatarList.push(<UnknownAvatar index={i} size={size} />)
-    }
-
-    return unknownAvatarList
+    return (
+      <>
+        {[...Array(3 - length)].map((_, index) => (
+          <UnknownAvatar index={index} size={size} />
+        ))}
+      </>
+    )
   }
 
   if (isMoreThanTree) {

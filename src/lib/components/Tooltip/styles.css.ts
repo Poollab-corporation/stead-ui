@@ -3,6 +3,7 @@ import { style } from '@vanilla-extract/css'
 import { theme } from '@/globalTheme.css.ts'
 
 export const parent = style({})
+
 export const tooltipStyle = recipe({
   base: {
     position: 'absolute',

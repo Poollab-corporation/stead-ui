@@ -2,10 +2,16 @@ import { theme } from '@/globalTheme.css'
 import { style } from '@vanilla-extract/css'
 
 export const wrapper = style({
-  width: '580px',
+  width: '300px',
   backgroundColor: theme.colors.white,
   borderRadius: '4px',
   boxShadow: '0px 4px 30px 0px rgba(161, 176, 203, 0.26)',
+
+  '@media': {
+    'only screen and (min-width : 800px)': {
+      width: '580px',
+    },
+  },
 })
 
 export const contents = style({
